@@ -28,7 +28,7 @@
         android:layout_width="121dp"
         android:layout_height="47dp"
         android:background="@drawable/gradient_blue"
-        android:text="Start Game"
+        android:text="@string/startGameButtonText"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
