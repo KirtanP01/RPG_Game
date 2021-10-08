@@ -3,4 +3,5 @@
     <string name="welcome">Welcome!</string>
     <string name="start_game">Start Game</string>
     <string name="startGameButtonText">START GAME</string>
+    <string name="returnHomeButtonText">HOME</string>
 </resources>

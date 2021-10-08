@@ -7,7 +7,7 @@
     tools:context=".CharacterSelectionActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/characterOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,7 +19,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/characterThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +31,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/characterTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,20 +42,20 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/homeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Button"
+        android:text="@string/returnHomeButtonText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/startGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/startGameButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
