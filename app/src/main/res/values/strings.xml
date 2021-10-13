@@ -4,4 +4,8 @@
     <string name="start_game">Start Game</string>
     <string name="startGameButtonText">START GAME</string>
     <string name="returnHomeButtonText">HOME</string>
+    <string name="difficultyTitleTextView">Difficulty Selection</string>
+    <string name="characterTitleTextView">Character Selection</string>
+    <string name="instructionsTitleTextView">Instructions</string>
+    <string name="instructionsTextView">Instructions</string>
 </resources>
