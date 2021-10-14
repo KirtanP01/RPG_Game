@@ -3,6 +3,7 @@
     <string name="welcome">Welcome!</string>
     <string name="start_game">Start Game</string>
     <string name="startGameButtonText">START GAME</string>
+    <string name="continueButtonText">CONTINUE</string>
     <string name="returnHomeButtonText">HOME</string>
     <string name="pauseButtonText">PAUSE</string>
     <string name="difficultyTitleTextView">Difficulty Selection</string>
