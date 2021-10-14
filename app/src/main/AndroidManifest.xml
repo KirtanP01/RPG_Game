@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RPG_Game">
         <activity
-            android:name=".gameplayActivity"
+            android:name=".GameplayActivity"
             android:exported="true" />
         <activity
-            android:name=".difficultySelectionActivity"
+            android:name=".DifficultySelectionActivity"
             android:exported="true" />
         <activity
-            android:name=".instructionsActivity"
+            android:name=".InstructionsActivity"
             android:exported="true" />
         <activity
             android:name=".CharacterSelectionActivity"
