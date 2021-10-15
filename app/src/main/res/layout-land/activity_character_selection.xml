@@ -85,7 +85,6 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:clickable="true"
-        android:onClick="selectionCharacter3"
         android:alpha="0.01"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
