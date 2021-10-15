@@ -10,5 +10,4 @@
     <string name="characterTitleTextView">Character Selection</string>
     <string name="instructionsTitleTextView">Instructions</string>
     <string name="instructionsTextView">Instructions</string>
-    <string name="start_game">Start Game</string>
 </resources>
