@@ -51,4 +51,84 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <ImageView
+        android:id="@+id/userHealthBar"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#B00020"
+        android:foreground="@color/design_default_color_error"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/bottom_bar" />
+
+    <ImageView
+        android:id="@+id/userHealthBarOverlay"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.05"
+        android:background="#FFFFFF"
+        android:foreground="@color/design_default_color_error"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/bottom_bar"
+        tools:srcCompat="@color/design_default_color_background" />
+
+    <TextView
+        android:id="@+id/playerHealthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 HP"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/userHealthBarOverlay"
+        app:layout_constraintEnd_toEndOf="@+id/userHealthBarOverlay"
+        app:layout_constraintStart_toStartOf="@+id/userHealthBarOverlay"
+        app:layout_constraintTop_toTopOf="@+id/userHealthBarOverlay" />
+
+    <ImageView
+        android:id="@+id/enemyHealthBar"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#B00020"
+        android:foreground="@color/design_default_color_error"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/bottom_bar" />
+
+    <ImageView
+        android:id="@+id/enemyHealthBarOverlay"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:alpha="0.05"
+        android:background="#FFFFFF"
+        android:foreground="@color/design_default_color_error"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="@+id/enemyHealthBar"
+        app:layout_constraintEnd_toEndOf="@+id/enemyHealthBar"
+        app:srcCompat="@android:drawable/bottom_bar"
+        tools:srcCompat="@color/design_default_color_background" />
+
+    <TextView
+        android:id="@+id/playerHealthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 HP"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/enemyHealthBarOverlay"
+        app:layout_constraintEnd_toEndOf="@+id/enemyHealthBarOverlay"
+        app:layout_constraintStart_toStartOf="@+id/enemyHealthBarOverlay"
+        app:layout_constraintTop_toTopOf="@+id/enemyHealthBarOverlay" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
