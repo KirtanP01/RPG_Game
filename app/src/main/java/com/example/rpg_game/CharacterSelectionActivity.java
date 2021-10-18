@@ -18,4 +18,6 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         Intent homePage = new Intent(this, CharacterSelectionActivity.class);
         startActivity(homePage);
     }
+
+
 }

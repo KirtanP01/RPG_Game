@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RPG_Game">
         <activity
+            android:name=".PuaseActivity"
+            android:exported="true" />
+        <activity
             android:name=".GameplayActivity"
             android:exported="true" />
         <activity

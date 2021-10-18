@@ -30,4 +30,6 @@ public class InstructionsActivity extends AppCompatActivity {
         Intent nextPage = new Intent(this, CharacterSelectionActivity.class);
         startActivity(nextPage);
     }
+
+
 }
