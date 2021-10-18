@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameplayActivity"
+    tools:context=".gameplayActivity"
     android:background="@drawable/background">
 
     <Button
@@ -73,7 +73,6 @@
         android:layout_marginBottom="8dp"
         android:alpha="0.05"
         android:background="#FFFFFF"
-        android:foreground="@color/design_default_color_error"
         android:scaleX="1"
         android:scaleY="1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,18 +109,19 @@
         android:id="@+id/enemyHealthBarOverlay"
         android:layout_width="250dp"
         android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:alpha="0.05"
         android:background="#FFFFFF"
-        android:foreground="@color/design_default_color_error"
         android:scaleX="1"
         android:scaleY="1"
-        app:layout_constraintBottom_toBottomOf="@+id/enemyHealthBar"
-        app:layout_constraintEnd_toEndOf="@+id/enemyHealthBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/bottom_bar"
         tools:srcCompat="@color/design_default_color_background" />
 
     <TextView
-        android:id="@+id/playerHealthText"
+        android:id="@+id/enemyHealthText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="100 HP"
