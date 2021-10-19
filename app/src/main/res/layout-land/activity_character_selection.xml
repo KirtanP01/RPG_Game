@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.38"
-        tools:srcCompat="@drawable/knightZoomed" />
+        tools:srcCompat="@drawable/knightzoomed" />
 
     <ImageView
         android:id="@+id/characterThree"
@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.369"
-        tools:srcCompat="@drawable/championZoomed" />
+        tools:srcCompat="@drawable/championzoomed" />
 
     <ImageView
         android:id="@+id/characterTwo"
@@ -40,7 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.38"
-        tools:srcCompat="@drawable/clockworkKnightZoomed" />
+        tools:srcCompat="@drawable/clockworkknightzoomed" />
 
     <Button
         android:id="@+id/homeButton"
