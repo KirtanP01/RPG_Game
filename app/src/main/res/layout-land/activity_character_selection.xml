@@ -7,7 +7,7 @@
     tools:context=".CharacterSelectionActivity"
     android:background="@drawable/background">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/characterOne"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -19,7 +19,18 @@
         app:layout_constraintVertical_bias="0.38"
         tools:srcCompat="@drawable/knightzoomed" />
 
-    <ImageView
+    <ImageButton
+        android:id="@+id/characterTwo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38"
+        tools:srcCompat="@drawable/clockworkknightzoomed" />
+
+    <ImageButton
         android:id="@+id/characterThree"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -30,17 +41,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.369"
         tools:srcCompat="@drawable/championzoomed" />
-
-    <ImageView
-        android:id="@+id/characterTwo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.38"
-        tools:srcCompat="@drawable/clockworkknightzoomed" />
 
     <Button
         android:id="@+id/homeButton"
@@ -84,5 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.069" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
