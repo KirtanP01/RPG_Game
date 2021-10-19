@@ -13,4 +13,7 @@ public class gameplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
     }
+
+
+
 }
