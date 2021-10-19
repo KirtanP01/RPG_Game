@@ -85,44 +85,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.069" />
 
-    <ImageView
-        android:id="@+id/selectorImageOne"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:alpha="0.01"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.199"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376"
-        app:srcCompat="@drawable/blue_square_for_selection" />
-
-    <ImageView
-        android:id="@+id/selectorImageTwo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:alpha="0.01"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376"
-        app:srcCompat="@drawable/blue_square_for_selection" />
-
-    <ImageView
-        android:id="@+id/selectorImageThree"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:alpha="0.01"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.364"
-        app:srcCompat="@drawable/blue_square_for_selection" />
 </androidx.constraintlayout.widget.ConstraintLayout>
