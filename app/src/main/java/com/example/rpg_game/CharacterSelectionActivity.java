@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class CharacterSelectionActivity extends AppCompatActivity {
 
@@ -12,6 +13,15 @@ public class CharacterSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_selection);
+
+        ImageButton imageButtonC1 = (ImageButton)findViewById(R.id.characterOne);
+        imageButtonC1.setImageResource(R.drawable.knightzoomed);
+
+        ImageButton imageButtonC2 = (ImageButton)findViewById(R.id.characterTwo);
+        imageButtonC2.setImageResource(R.drawable.clockworkknightzoomed);
+
+        ImageButton imageButtonC3 = (ImageButton)findViewById(R.id.characterThree);
+        imageButtonC3.setImageResource(R.drawable.championzoomed);
     }
 
     public void homePage(View v){
