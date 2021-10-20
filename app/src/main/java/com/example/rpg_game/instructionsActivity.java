@@ -22,7 +22,7 @@ public class instructionsActivity extends AppCompatActivity {
     }
 
     public void homePage(View v){
-        Intent homePage = new Intent(this, CharacterSelectionActivity.class);
+        Intent homePage = new Intent(this, MainActivity.class);
         startActivity(homePage);
     }
 

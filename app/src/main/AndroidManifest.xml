@@ -10,16 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RPG_Game">
         <activity
-            android:name=".PuaseActivity"
+            android:name=".PauseActivity"
             android:exported="true" />
         <activity
-            android:name=".GameplayActivity"
+            android:name=".GameplayActivity" />
+        <activity
+            android:name=".difficultySelectionActivity"
             android:exported="true" />
         <activity
-            android:name=".DifficultySelectionActivity"
-            android:exported="true" />
-        <activity
-            android:name=".InstructionsActivity"
+            android:name=".instructionsActivity"
             android:exported="true" />
         <activity
             android:name=".CharacterSelectionActivity"
