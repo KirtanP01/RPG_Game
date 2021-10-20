@@ -10,8 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RPG_Game">
         <activity
-            android:name=".gameplayActivity"
+            android:name=".PauseActivity"
             android:exported="true" />
+        <activity
+            android:name=".GameplayActivity" />
         <activity
             android:name=".difficultySelectionActivity"
             android:exported="true" />
