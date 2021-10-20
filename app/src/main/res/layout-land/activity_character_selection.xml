@@ -11,41 +11,44 @@
         android:id="@+id/characterOne"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:onClick="chooseOne"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.38"
-        android:scaleType="centerCrop"
-        android:padding="20dp"
         tools:srcCompat="@drawable/knightzoomed" />
 
     <ImageButton
         android:id="@+id/characterTwo"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:onClick="chooseTwo"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.38"
-        android:scaleType="centerCrop"
-        android:padding="20dp"
         tools:srcCompat="@drawable/clockworkknightzoomed" />
 
     <ImageButton
         android:id="@+id/characterThree"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:onClick="chooseThree"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.369"
-        android:scaleType="centerCrop"
-        android:padding="20dp"
         tools:srcCompat="@drawable/championzoomed" />
 
     <Button
