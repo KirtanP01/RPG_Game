@@ -17,6 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.38"
+        android:scaleType="centerCrop"
+        android:padding="20dp"
         tools:srcCompat="@drawable/knightzoomed" />
 
     <ImageButton
@@ -28,6 +30,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.38"
+        android:scaleType="centerCrop"
+        android:padding="20dp"
         tools:srcCompat="@drawable/clockworkknightzoomed" />
 
     <ImageButton
@@ -40,6 +44,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.369"
+        android:scaleType="centerCrop"
+        android:padding="20dp"
         tools:srcCompat="@drawable/championzoomed" />
 
     <Button
