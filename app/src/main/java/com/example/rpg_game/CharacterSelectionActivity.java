@@ -27,6 +27,7 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         imageButtonC3.setImageResource(R.drawable.championzoomed);
     }
 
+
     public void homePage(View v){
         Intent homePage = new Intent(this, MainActivity.class);
         startActivity(homePage);

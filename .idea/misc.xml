@@ -8,32 +8,33 @@
         <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_gameplay.xml" value="0.33" />
         <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_instructions.xml" value="0.33" />
         <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_math_question.xml" value="0.33" />
         <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_character_selection.xml" value="0.3087719298245614" />
         <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_difficulty_selection.xml" value="0.3087719298245614" />
         <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_gameplay.xml" value="0.3087719298245614" />
         <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_instructions.xml" value="0.3087719298245614" />
         <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/nass4560/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_math_question.xml" value="0.3087719298245614" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_character_selection.xml" value="0.33" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_difficulty_selection.xml" value="0.33" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_gameplay.xml" value="0.33" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_instructions.xml" value="0.33" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_puase.xml" value="0.31040564373897706" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_character_selection.xml" value="0.2817028985507246" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_difficulty_selection.xml" value="0.2817028985507246" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_gameplay.xml" value="0.2817028985507246" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_instructions.xml" value="0.33" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_main.xml" value="0.33" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_puase.xml" value="0.2821557971014493" />
-=======
+<<<<<<< Updated upstream
+        <entry key="..\:/Users/zhang1035/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_character_selection.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/zhang1035/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_main.xml" value="0.278125" />
+        <entry key="..\:/Users/zhang1035/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_character_selection.xml" value="0.3574074074074074" />
+        <entry key="..\:/Users/zhang1035/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_main.xml" value="0.32222222222222224" />
 =======
         <entry key="..\:/Users/zhou1276/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_character_selection.xml" value="0.32083333333333336" />
->>>>>>> 2080facf141d0544884e25703e9a1fd4467f6b18
+>>>>>>> Stashed changes
         <entry key="..\:/Users/zhou1276/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_gameplay.xml" value="0.328125" />
         <entry key="..\:/Users/zhou1276/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_gameplay.xml" value="0.36666666666666664" />
->>>>>>> b15961957b366ec8530306a254c2b4b1ee5cba4e
       </map>
     </option>
   </component>
