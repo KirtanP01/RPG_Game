@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class InstructionsActivity extends AppCompatActivity {
+public class instructionsActivity extends AppCompatActivity {
 
     private final String instructions = "Welcome! In this game you will be fighting monsters. You and your opponent will take turns attacking one another. When it’s your turn, you will be given a math problem. You must answer the question correctly to deal damage. You will lose health every time your opponent attacks, so try to defeat as many monsters before you perish!\n";
 
