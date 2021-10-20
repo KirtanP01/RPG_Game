@@ -14,8 +14,7 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_selection);
     }
-    ImageButton simpleImageButton = (ImageButton)findViewById(R.id.characterOne);
-    simpleImageButton.setImageResource(R.drawable.); //set the image programmatically
+
 
     public void homePage(View v){
         Intent homePage = new Intent(this, MainActivity.class);
