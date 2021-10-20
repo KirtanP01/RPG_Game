@@ -24,7 +24,12 @@
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_gameplay.xml" value="0.2817028985507246" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_instructions.xml" value="0.33" />
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_main.xml" value="0.33" />
+<<<<<<< HEAD
         <entry key="..\:/Users/prabhu1650/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_puase.xml" value="0.2821557971014493" />
+=======
+        <entry key="..\:/Users/zhou1276/Documents/GitHub/RPG_Game/app/src/main/res/layout-land/activity_gameplay.xml" value="0.328125" />
+        <entry key="..\:/Users/zhou1276/Documents/GitHub/RPG_Game/app/src/main/res/layout/activity_gameplay.xml" value="0.36666666666666664" />
+>>>>>>> b15961957b366ec8530306a254c2b4b1ee5cba4e
       </map>
     </option>
   </component>
