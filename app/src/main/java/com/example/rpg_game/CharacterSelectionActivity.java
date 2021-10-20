@@ -9,6 +9,9 @@ import android.widget.ImageButton;
 
 public class CharacterSelectionActivity extends AppCompatActivity {
 
+    public static final String EXTRA_HERO = "com.example.CharacterSelectionActivity.HERO";;
+    //public static final int EXTRA_BOSS = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,5 +32,24 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         startActivity(homePage);
     }
 
+    int choice = 0;
+
+    public void chooseOne(View v){
+        choice = 1;
+    }
+
+    public void chooseTwo(View v){
+        choice = 2;
+    }
+
+    public void chooseThree(View v){
+        choice = 3;
+    }
+
+//    switch (choice){
+//        case1 :
+//            EXTRA_HERO = "knights.png";
+//            break;
+//    }
 
 }
