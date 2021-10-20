@@ -18,4 +18,6 @@ public class MainActivity extends AppCompatActivity {
         Intent StartGame = new Intent(this, instructionsActivity.class);
         startActivity(StartGame);
     }
+
+
 }

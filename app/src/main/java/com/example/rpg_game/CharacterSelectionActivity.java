@@ -13,6 +13,15 @@ public class CharacterSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_selection);
+
+        ImageButton imageButtonC1 = (ImageButton)findViewById(R.id.characterOne);
+        imageButtonC1.setImageResource(R.drawable.knightzoomed);
+
+        ImageButton imageButtonC2 = (ImageButton)findViewById(R.id.characterTwo);
+        imageButtonC2.setImageResource(R.drawable.clockworkknightzoomed);
+
+        ImageButton imageButtonC3 = (ImageButton)findViewById(R.id.characterThree);
+        imageButtonC3.setImageResource(R.drawable.championzoomed);
     }
 
 
@@ -20,4 +29,6 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         Intent homePage = new Intent(this, MainActivity.class);
         startActivity(homePage);
     }
+
+
 }
