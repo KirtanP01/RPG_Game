@@ -9,8 +9,8 @@ import android.widget.ImageButton;
 
 public class CharacterSelectionActivity extends AppCompatActivity {
 
-    public static final String EXTRA_HERO = "com.example.CharacterSelectionActivity.HERO";;
-    //public static final int EXTRA_BOSS = 0;
+    public static Character HERO;
+    public static Character VILLAIN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,15 +27,14 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         imageButtonC3.setImageResource(R.drawable.championzoomed);
     }
 
-
     public void homePage(View v){
         Intent homePage = new Intent(this, MainActivity.class);
         startActivity(homePage);
     }
 
     public void nextPage(View v){
-        Intent nextPage = new Intent(this, GameplayActivity.class);
-        startActivity(nextPage);
+        Intent homePage = new Intent(this, GameplayActivity.class);
+        startActivity(homePage);
     }
 
     int choice = 0;
@@ -55,10 +54,22 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         choice = 3;
     }
 
-//    switch (choice){
-//        case1 :
-//            EXTRA_HERO = "knights.png";
-//            break;
-//    }
+    public void startGame(View v){
+        Character hero = new Character(100, 15, R.drawable.knights);
+        Character villain = new Character(100,5, R.drawable.boss);
+
+        if (choice == 2){
+            hero.setImageID(R.drawable.clockworkknight);
+        }
+        else if (choice == 3){
+            hero.setImageID(R.drawable.champion);
+        }
+
+        HERO = hero;
+        VILLAIN = villain;
+
+        Intent intent = new Intent(this, GameplayActivity.class);
+        startActivity(intent);
+    }
 
 }

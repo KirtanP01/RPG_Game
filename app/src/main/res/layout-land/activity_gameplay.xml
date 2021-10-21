@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".gameplayActivity"
+    tools:context=".GameplayActivity"
     android:background="@drawable/background">
 
 
@@ -136,16 +136,17 @@
         app:layout_constraintTop_toTopOf="@+id/enemyHealthBarOverlay" />
 
     <ImageButton
-        android:id="@+id/menuButton"
+        android:id="@+id/pauseButton"
         android:layout_width="75dp"
         android:layout_height="30dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
         android:background="@null"
         android:scaleType="centerInside"
         android:src="@drawable/menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="0.055" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

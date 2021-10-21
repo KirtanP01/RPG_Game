@@ -3,10 +3,12 @@ package com.example.rpg_game;
 public class Character {
     private double health;
     private double damage;
+    private int imageResourceID;
 
-    public Character(double health, double damage) {
+    public Character(double health, double damage, int id) {
         this.health = health;
         this.damage = damage;
+        imageResourceID = id;
     }
 
     public double getHealth() {
@@ -21,8 +23,21 @@ public class Character {
         return damage;
     }
 
-    public void setDamage(double damage) {
+    public void setHeroDamage() {
+        double damage = (int)(Math.random() * 5) + 10;
         this.damage = damage;
+    }
+
+    public void setVillainDamage(double damage) {
+        this.damage = damage;
+    }
+
+    public double getImageID() {
+        return imageResourceID;
+    }
+
+    public void setImageID(int id) {
+        imageResourceID = id;
     }
 
     public void dealDamage(Character opp){
