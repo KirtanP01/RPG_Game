@@ -21,7 +21,12 @@ public class Character {
         return damage;
     }
 
-    public void setDamage(double damage) {
+    public void setHeroDamage() {
+        double damage = (int)(Math.random() * 5) + 10;
+        this.damage = damage;
+    }
+
+    public void setVillainDamage(double damage) {
         this.damage = damage;
     }
 
