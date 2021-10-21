@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +19,7 @@ public class PauseActivity extends AppCompatActivity {
         //set up main content view
         setContentView(R.layout.activity_pause);
         //this button will show the dialog
-        Button button1main = (Button) findViewById(R.id.menuButton);
+        ImageButton button1main = (ImageButton) findViewById(R.id.menuButton);
         Intent homePage = new Intent(this, MainActivity.class);
 
         button1main.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +34,7 @@ public class PauseActivity extends AppCompatActivity {
 
                 //set up text
                 TextView text = (TextView) dialog.findViewById(R.id.TextView01);
-                //text.setText(R.string.lots_of_text);
+                text.setText(R.string.PAUSED);
 
                 //set up image view
                 ImageView img = (ImageView) dialog.findViewById(R.id.ImageView01);
