@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".gameplayActivity"
+    tools:context=".GameplayActivity"
     android:background="@drawable/background">
 
 
@@ -136,7 +136,7 @@
         app:layout_constraintTop_toTopOf="@+id/enemyHealthBarOverlay" />
 
     <ImageButton
-        android:id="@+id/menuButton"
+        android:id="@+id/pauseButton"
         android:layout_width="75dp"
         android:layout_height="30dp"
         android:background="@null"
