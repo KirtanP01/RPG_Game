@@ -35,15 +35,18 @@ public class CharacterSelectionActivity extends AppCompatActivity {
 
     int choice = 0;
 
-    public void chooseOne(View v){
+    public void chooseOne(View v)
+    {
         choice = 1;
     }
 
-    public void chooseTwo(View v){
+    public void chooseTwo(View v)
+    {
         choice = 2;
     }
 
-    public void chooseThree(View v){
+    public void chooseThree(View v)
+    {
         choice = 3;
     }
 

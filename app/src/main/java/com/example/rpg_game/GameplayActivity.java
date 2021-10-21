@@ -14,4 +14,8 @@ public class gameplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gameplay);
     }
 
+    public void homePage(View v){
+        Intent homePage = new Intent(this, MainActivity.class);
+        startActivity(homePage);
+    }
 }
