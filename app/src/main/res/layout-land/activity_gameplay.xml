@@ -136,7 +136,7 @@
         app:layout_constraintTop_toTopOf="@+id/enemyHealthBarOverlay" />
 
     <ImageButton
-        android:id="@+id/menuButton"
+        android:id="@+id/pauseButton"
         android:layout_width="75dp"
         android:layout_height="30dp"
         android:layout_marginStart="10dp"
