@@ -18,7 +18,7 @@ public class PauseActivity extends AppCompatActivity {
         //set up main content view
         setContentView(R.layout.activity_pause);
         //this button will show the dialog
-        Button button1main = (Button) findViewById(R.id.menuButton);
+        Button button1main = (Button) findViewById(R.id.pauseButton);
         Intent homePage = new Intent(this, MainActivity.class);
 
         button1main.setOnClickListener(new View.OnClickListener() {

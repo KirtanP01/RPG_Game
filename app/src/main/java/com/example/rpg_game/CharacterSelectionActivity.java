@@ -33,7 +33,7 @@ public class CharacterSelectionActivity extends AppCompatActivity {
     }
 
     public void nextPage(View v){
-        Intent homePage = new Intent(this, gameplayActivity.class);
+        Intent homePage = new Intent(this, GameplayActivity.class);
         startActivity(homePage);
     }
 
