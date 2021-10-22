@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/homeButton"
         android:layout_width="120dp"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:onClick="homePage"
         android:background="@drawable/homebutton"
@@ -24,11 +24,11 @@
 
     <Button
         android:id="@+id/startGameButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
         android:onClick="nextPage"
-        android:background="@drawable/gradient_blue"
-        android:text="@string/continueButtonText"
+        android:background="@drawable/continuebutton"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
