@@ -32,7 +32,7 @@ public class Character {
         this.damage = damage;
     }
 
-    public double getImageID() {
+    public int getImageID() {
         return imageResourceID;
     }
 
