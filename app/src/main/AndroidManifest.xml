@@ -11,28 +11,22 @@
         android:theme="@style/Theme.RPG_Game">
         <activity
             android:name=".mathQuestion"
-            android:screenOrientation="landscape"
             android:exported="true" />
         <activity
             android:name=".PauseActivity"
-            android:screenOrientation="landscape"
             android:exported="true" />
         <activity android:name=".GameplayActivity" />
         <activity
             android:name=".difficultySelectionActivity"
-            android:screenOrientation="landscape"
             android:exported="true" />
         <activity
             android:name=".instructionsActivity"
-            android:screenOrientation="landscape"
             android:exported="true" />
         <activity
             android:name=".CharacterSelectionActivity"
-            android:screenOrientation="landscape"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="landscape"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
