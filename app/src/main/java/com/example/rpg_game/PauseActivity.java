@@ -27,7 +27,7 @@ public class PauseActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //set up dialog
                 Dialog dialog = new Dialog(PauseActivity.this);
-                //dialog.setContentView(R.layout.maindialog);
+                dialog.setContentView(R.layout.activity_pause);
                 dialog.setTitle("This is my custom dialog box");
                 dialog.setCancelable(true);
                 //there are a lot of settings, for dialog, check them all out!
