@@ -9,11 +9,12 @@
 
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
         android:layout_marginStart="20dp"
         android:onClick="homePage"
-        android:text="@string/returnHomeButtonText"
+        android:background="@drawable/homebutton"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/instructionTitleText"
         app:layout_constraintHorizontal_bias="0.09"
