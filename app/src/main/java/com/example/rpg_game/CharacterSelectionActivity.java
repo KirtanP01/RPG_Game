@@ -58,6 +58,9 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         Character hero = new Character(100, 15, R.drawable.knights);
         Character villain = new Character(100,5, R.drawable.boss);
 
+        if (choice == 1) {
+            hero.setImageID(R.drawable.knights);
+        }
         if (choice == 2){
             hero.setImageID(R.drawable.clockworkknight);
         }
