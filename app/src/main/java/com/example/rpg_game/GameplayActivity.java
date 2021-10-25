@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 public class GameplayActivity extends AppCompatActivity {
     ImageView heroView;
+    ImageView villainView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,8 @@ public class GameplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gameplay);
         heroView = (ImageView) findViewById(R.id.userCharacter);
         heroView.setImageResource(CharacterSelectionActivity.HERO.getImageID());
+        villainView = (ImageView) findViewById(R.id.enemyCharacter);
+        villainView.setImageResource(CharacterSelectionActivity.VILLAIN.getImageID());
     }
 
     public void homePage(View v){
