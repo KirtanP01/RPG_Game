@@ -107,11 +107,11 @@ public class mathQuestion extends AppCompatActivity {
         ArrayList bonusQuestionAnswer = new ArrayList();
         bonusQuestionAnswer.add("-cos(x) + c");
 
-
-
-
     }
 
-
+    // onCreate: display random problem
+    // submit button
+    //https://www.google.com/search?q=how+to+convert+a+string+into+an+equation+in+java&rlz=1C1GCEU_enUS973US973&oq=how+to+turn+a+string+into+an+equatio&aqs=chrome.2.69i57j0i22i30l3j0i390l2.9910j0j7&sourceid=chrome&ie=UTF-8#kpvalbx=_r612Ya3CCfKnqtsPxZaEiAs21
+    // convert string to equation^
 
 }
