@@ -22,6 +22,9 @@ public class GameplayActivity extends AppCompatActivity {
         heroView.setImageResource(CharacterSelectionActivity.HERO.getImageID());
         villainView = (ImageView) findViewById(R.id.enemyCharacter);
         villainView.setImageResource(CharacterSelectionActivity.VILLAIN.getImageID());
+        /*
+            This method automatically opens up the math question activity and asks the user a math question
+         */
         // https://stackoverflow.com/questions/7965494/how-to-put-some-delay-in-calling-an-activity-from-another-activity
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -38,7 +41,11 @@ public class GameplayActivity extends AppCompatActivity {
         startActivity(homePage);
     }
 
-
+    public void pauseMenu(View view)
+    {
+        Intent pauseMenu = new Intent(this, PauseActivity.class);
+        startActivity(pauseMenu);
+    }
 
 
 }
