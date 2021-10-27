@@ -34,58 +34,32 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.249" />
 
-    <Button
-        android:id="@+id/answerButton1"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
+    <EditText
+        android:id="@+id/mathAnswerEditText"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
         android:background="@drawable/pinkanswerbox"
-        android:text="(answer one)"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Put Answer Here"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
+        app:layout_constraintVertical_bias="0.7" />
 
     <Button
-        android:id="@+id/answerButton2"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="25dp"
-        android:background="@drawable/pinkanswerbox"
-        android:text="(answer two)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/answerButton3"
-        app:layout_constraintHorizontal_bias="0.22"
-        app:layout_constraintStart_toEndOf="@+id/answerButton1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
-
-    <Button
-        android:id="@+id/answerButton3"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="25dp"
-        android:background="@drawable/pinkanswerbox"
-        android:text="(answer three)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/answerButton4"
-        app:layout_constraintHorizontal_bias="0.987"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
-
-    <Button
-        android:id="@+id/answerButton4"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:background="@drawable/pinkanswerbox"
-        android:text="(answer four)"
+        android:id="@+id/submitButton"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:background="@drawable/submitbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737" />
+        app:layout_constraintVertical_bias="0.94" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
