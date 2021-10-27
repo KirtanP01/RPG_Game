@@ -33,7 +33,7 @@ public class GameplayActivity extends AppCompatActivity {
                 Intent i= new Intent(GameplayActivity.this,mathQuestion.class);
                 startActivity(i);
             }
-        }, 3000);
+        }, 10000);
     }
 
     public void homePage(View v){

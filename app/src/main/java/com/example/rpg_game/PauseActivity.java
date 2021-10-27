@@ -2,10 +2,13 @@ package com.example.rpg_game;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -19,62 +22,25 @@ public class PauseActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //set up main content view
-        setContentView(R.layout.activity_pause);
-        //this button will show the dialog
-        ImageButton button1main = (ImageButton) findViewById(R.id.pauseButton);
-
-        //intent to go to home page
-        Intent homePage = new Intent(this, MainActivity.class);
-
-        button1main.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //set up dialog
-                Dialog dialog = new Dialog(PauseActivity.this);
-                Log.i("Denna", "Inside onClick after pressing Menu button");
-                dialog.setContentView(R.layout.activity_pause);
-                dialog.setTitle("This is my custom dialog box");
-                dialog.setCancelable(true);
-                //there are a lot of settings, for dialog, check them all out!
-
-                //set up text
-                TextView text = (TextView) dialog.findViewById(R.id.TextView01);
-                text.setText(R.string.PAUSED);
-
-                //set up image view
-                ImageView img = (ImageView) dialog.findViewById(R.id.ImageView01);
-                //img.setImageResource(R.drawable.nista_logo);
-
-                //set up button
-                Button play = (Button) dialog.findViewById(R.id.play);
-                play.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        finish();
-                    }
-                });
-
-                //set up button
-                Button home = (Button) dialog.findViewById(R.id.home);
-                home.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(homePage);
-                    }
-                });
-
-                //set up button
-                Button restart = (Button) dialog.findViewById(R.id.restart);
-                restart.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        finish();
-                    }
-                });
-                //now that the dialog is set up, it's time to show it
-                dialog.show();
-            }
-        });
+//        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//        // Get the layout inflater
+//        LayoutInflater inflater = requireActivity().getLayoutInflater();
+//
+//        // Inflate and set the layout for the dialog
+//        // Pass null as the parent view because its going in the dialog layout
+//        builder.setView(inflater.inflate(R.layout.dialog_signin, null))
+//                // Add action buttons
+//                .setPositiveButton(R.string.Play, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        // sign in the user ...
+//                    }
+//                })
+//                .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int id) {
+//                        LoginDialogFragment.this.getDialog().cancel();
+//                    }
+//                });
+//        return builder.create();
     }
 }
