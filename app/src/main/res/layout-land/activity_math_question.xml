@@ -34,27 +34,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.249" />
 
+<<<<<<< HEAD
+    <EditText
+        android:id="@+id/mathAnswerEditText"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+=======
     <Button
         android:id="@+id/answerButton1"
         android:layout_width="150dp"
         android:layout_height="50dp"
+>>>>>>> d256fa49dfa7ad767e6b505de6e03a6fb1582e0b
         android:background="@drawable/pinkanswerbox"
-        android:text="(answer one)"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Put Answer Here"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+=======
         app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.737" />
+>>>>>>> d256fa49dfa7ad767e6b505de6e03a6fb1582e0b
 
     <Button
-        android:id="@+id/answerButton2"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="25dp"
-        android:background="@drawable/pinkanswerbox"
-        android:text="(answer two)"
+        android:id="@+id/submitButton"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:background="@drawable/submitbutton"
         app:layout_constraintBottom_toBottomOf="parent"
+<<<<<<< HEAD
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
+
+=======
         app:layout_constraintEnd_toStartOf="@+id/answerButton3"
         app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toEndOf="@+id/answerButton1"
@@ -87,5 +109,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.737" />
+>>>>>>> d256fa49dfa7ad767e6b505de6e03a6fb1582e0b
 
 </androidx.constraintlayout.widget.ConstraintLayout>
