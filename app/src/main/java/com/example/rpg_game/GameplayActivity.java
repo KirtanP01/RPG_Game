@@ -41,11 +41,11 @@ public class GameplayActivity extends AppCompatActivity {
         startActivity(homePage);
     }
 
-    public void pauseMenu(View view)
-    {
-        Intent pauseMenu = new Intent(this, PauseActivity.class);
-        startActivity(pauseMenu);
-    }
+//    public void pauseMenu(View view)
+//    {
+//        Intent pauseMenu = new Intent(this, PauseActivity.class);
+//        startActivity(pauseMenu);
+//    }
 
 
 }
