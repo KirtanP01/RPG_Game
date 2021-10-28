@@ -3,9 +3,14 @@ package com.example.rpg_game;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import java.util.*;
 
 public class mathQuestion extends AppCompatActivity {
@@ -205,6 +210,17 @@ public class mathQuestion extends AppCompatActivity {
 
     }
 
+    public boolean submit(View v){
+        EditText answer = findViewById(R.id.mathAnswerEditText);
+        String ans = answer.getText().toString();
+        TextView problem = findViewById(R.id.mathQuestionTextView);
+        String prob = problem.getText().toString();
+
+        ScriptEngineManager mgr = new ScriptEngineManager();
+        ScriptEngine engine = mgr.getEngineByName("JavaScript");
+        String infix = "3+2*(4+5)";
+        System.out.println(engine.eval(infix));
+    }
     // onCreate: display random problem
     // submit button
     //https://www.google.com/search?q=how+to+convert+a+string+into+an+equation+in+java&rlz=1C1GCEU_enUS973US973&oq=how+to+turn+a+string+into+an+equatio&aqs=chrome.2.69i57j0i22i30l3j0i390l2.9910j0j7&sourceid=chrome&ie=UTF-8#kpvalbx=_r612Ya3CCfKnqtsPxZaEiAs21
