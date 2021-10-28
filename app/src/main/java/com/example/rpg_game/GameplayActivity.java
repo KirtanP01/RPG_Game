@@ -47,5 +47,19 @@ public class GameplayActivity extends AppCompatActivity {
 //        startActivity(pauseMenu);
 //    }
 
+    public void pauseGame(View v){
+        boolean play = true;
+
+        if(play){
+            onPause();
+            play = false;
+        }
+
+        if(play == false){
+            onResume();
+            play = true;
+        }
+    }
+
 
 }
