@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RPG_Game">
         <activity
+            android:name=".activity_menu"
+            android:exported="true" />
+        <activity
             android:name=".mathQuestion"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
