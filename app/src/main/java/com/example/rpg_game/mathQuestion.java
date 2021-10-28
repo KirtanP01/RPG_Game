@@ -3,10 +3,11 @@ package com.example.rpg_game;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.*;
 
 public class mathQuestion extends AppCompatActivity {
 
@@ -101,15 +102,45 @@ public class mathQuestion extends AppCompatActivity {
         sixthGradeAnswers.add("5");
         sixthGradeAnswers.add("7");
 
-        ArrayList bonusQuestion= new ArrayList();
+        ArrayList<String> bonusQuestion= new ArrayList<>();
         bonusQuestion.add("∫sin(x)dx");
 
-        ArrayList bonusQuestionAnswer = new ArrayList();
+        ArrayList<String> bonusQuestionAnswer = new ArrayList<>();
         bonusQuestionAnswer.add("-cos(x) + c");
 
         TextView questionTV = findViewById(R.id.mathQuestionTextView);
         questionTV.setText(firstGradeQuestions.get(rand));
     }
+
+    public void submitAnswer(View v)
+    {
+        EditText userAnswer = findViewById(R.id.mathAnswerEditText);
+        String  input = userAnswer.getText().toString();
+        input = input.replace(" ", "");
+
+        ArrayList<String> mathQuestionAnswers = new ArrayList<>();
+        mathQuestionAnswers.add("4" + "4" + "3" + "6" + "6");
+        mathQuestionAnswers.add("13" + "13" + "12" + "20" + "18");
+        mathQuestionAnswers.add("12" + "12" + "36" + "8" + "48");
+        mathQuestionAnswers.add("1009" + "683" + "976" + "880" + "792");
+        mathQuestionAnswers.add("183" + "376" + "-237" + "-297" + "351");
+        mathQuestionAnswers.add("6" + "5" + "7" + "5" + "7");
+        mathQuestionAnswers.add("-cos(x)+c");
+
+        for(int i = 0; i < mathQuestionAnswers.size(); i++)
+        {
+            if(input.equals(mathQuestionAnswers.get(i)))
+            {
+                //finishActivity();
+            }
+
+            else
+            {
+
+            }
+        }
+    }
+
     public static void main(String[] args) {
 //        ArrayList<String> firstGradeQuestions = new ArrayList<String>();
 //        firstGradeQuestions.add("2 + 2");
