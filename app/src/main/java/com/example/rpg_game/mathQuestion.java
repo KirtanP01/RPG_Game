@@ -131,7 +131,7 @@ public class mathQuestion extends AppCompatActivity {
         {
             if(input.equals(mathQuestionAnswers.get(i)))
             {
-
+                //finishActivity();
             }
 
             else
