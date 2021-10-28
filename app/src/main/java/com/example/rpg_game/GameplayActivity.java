@@ -33,7 +33,7 @@ public class GameplayActivity extends AppCompatActivity {
                 Intent i= new Intent(GameplayActivity.this,mathQuestion.class);
                 startActivity(i);
             }
-        }, 10000);
+        }, 4000);
     }
 
     public void homePage(View v){
@@ -46,6 +46,5 @@ public class GameplayActivity extends AppCompatActivity {
 //        Intent pauseMenu = new Intent(this, PauseActivity.class);
 //        startActivity(pauseMenu);
 //    }
-
 
 }
