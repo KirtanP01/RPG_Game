@@ -233,8 +233,7 @@ public class mathQuestion extends AppCompatActivity {
         {
             if (input.equals(mathQuestionAnswers.get(i)))
             {
-                Intent nextPage = new Intent(this, GameplayActivity.class);
-                startActivity(nextPage);
+                // AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
             }
             else
                 {
