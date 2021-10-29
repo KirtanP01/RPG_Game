@@ -15,6 +15,7 @@ public class instructionsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadein, R.anim.fadein);
         setContentView(R.layout.activity_instructions);
 
         TextView instructionText = findViewById(R.id.instructionsText);

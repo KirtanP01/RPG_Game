@@ -12,7 +12,11 @@ import java.util.ArrayList;
 //import javax.script.ScriptEngine;
 //import javax.script.ScriptEngineManager;
 //import javax.script.ScriptException;
+<<<<<<< Updated upstream
 //import java.util.*;
+=======
+import java.util.*;
+>>>>>>> Stashed changes
 
 public class mathQuestion extends AppCompatActivity {
 
@@ -137,6 +141,7 @@ public class mathQuestion extends AppCompatActivity {
 
     }
 
+<<<<<<< Updated upstream
     public void submit(View v){
         EditText answer = findViewById(R.id.mathAnswerEditText);
         String userAns = answer.getText().toString();
@@ -155,6 +160,41 @@ public class mathQuestion extends AppCompatActivity {
     }
 
     // onCreate: display random problem
+=======
+    public void submitAnswer(View v)
+    {
+        EditText userAnswer = findViewById(R.id.mathAnswerEditText);
+
+        String input = userAnswer.getText().toString();
+
+        input = input.replace(" ", "");
+
+        ArrayList<String> mathQuestionAnswers = new ArrayList<>();
+
+        mathQuestionAnswers.add("4" + "4" + "3" + "6" + "6");
+        mathQuestionAnswers.add("13" + "13" + "12" + "20" + "18");
+        mathQuestionAnswers.add("12" + "12" + "36" + "8" + "48");
+        mathQuestionAnswers.add("1009" + "683" + "976" + "880" + "792");
+        mathQuestionAnswers.add("183" + "376" + "-237" + "-297" + "351");
+        mathQuestionAnswers.add("6" + "5" + "7" + "5" + "7");
+        mathQuestionAnswers.add("-cos(x)+c");
+
+        for (int i = 0; i < mathQuestionAnswers.size(); i++)
+        {
+            if (input.equals(mathQuestionAnswers.get(i)))
+            {
+                Intent nextPage = new Intent(this, GameplayActivity.class);
+                startActivity(nextPage);
+            }
+            else
+                {
+
+            }
+        }
+    }
+
+            // onCreate: display random problem
+>>>>>>> Stashed changes
     // submit button
     //https://www.google.com/search?q=how+to+convert+a+string+into+an+equation+in+java&rlz=1C1GCEU_enUS973US973&oq=how+to+turn+a+string+into+an+equatio&aqs=chrome.2.69i57j0i22i30l3j0i390l2.9910j0j7&sourceid=chrome&ie=UTF-8#kpvalbx=_r612Ya3CCfKnqtsPxZaEiAs21
     // convert string to equation^
