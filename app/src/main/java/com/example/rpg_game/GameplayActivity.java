@@ -34,6 +34,7 @@ public class GameplayActivity extends AppCompatActivity {
                 startActivity(i);
             }
         }, 10000);
+
     }
 
     public void homePage(View v){

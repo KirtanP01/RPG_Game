@@ -142,8 +142,8 @@ public class mathQuestion extends AppCompatActivity {
         String userAns = answer.getText().toString();
         String realAns = firstGradeAnswers.get(rand);
         canAttack = userAns.equals(realAns);
-        Intent intent = new Intent(this, GameplayActivity.class);
-        startActivity(intent);
+        Intent sendInfo = new Intent(this, GameplayActivity.class);
+        startActivity(sendInfo);
 
 //        TextView problem = findViewById(R.id.mathQuestionTextView);
 //        String prob = problem.getText().toString();
