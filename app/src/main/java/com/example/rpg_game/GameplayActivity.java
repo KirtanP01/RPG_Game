@@ -8,11 +8,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class GameplayActivity extends AppCompatActivity {
+
     ImageView heroView;
     ImageView villainView;
+    boolean play;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,8 @@ public class GameplayActivity extends AppCompatActivity {
                 startActivity(i);
             }
         }, 10000);
+
+        play = true;
     }
 
     public void homePage(View v){
@@ -48,18 +53,18 @@ public class GameplayActivity extends AppCompatActivity {
 //    }
 
     public void pauseGame(View v){
-        boolean play = true;
+        ImageButton play_pause_button = findViewById(R.id.play_pause_button);
 
         if(play){
-            onPause();
+            play_pause_button.setImageResource(R.drawable.playicon);
             play = false;
+            onPause();
         }
 
-        if(play == false){
-            onResume();
+        if(!play){
+            play_pause_button.setImageResource(R.drawable.pauseicon);
             play = true;
+            onResume();
         }
     }
-
-
 }
