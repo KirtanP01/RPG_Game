@@ -15,11 +15,13 @@ import java.util.ArrayList;
 
 public class mathQuestion extends AppCompatActivity {
 
+    int rand;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_question);
-        int rand = (int)(Math.random() * 5);
+        rand = (int)(Math.random() * 5);
         ArrayList<String> firstGradeQuestions = new ArrayList<String>();
         firstGradeQuestions.add("2 + 2");
         firstGradeQuestions.add("1 + 3");
