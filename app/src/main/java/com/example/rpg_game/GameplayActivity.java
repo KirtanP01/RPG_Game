@@ -1,6 +1,7 @@
 package com.example.rpg_game;
 
 import static com.example.rpg_game.CharacterSelectionActivity.HERO;
+import static com.example.rpg_game.CharacterSelectionActivity.VILLAIN;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,7 +34,11 @@ public class GameplayActivity extends AppCompatActivity {
                 Intent i= new Intent(GameplayActivity.this,mathQuestion.class);
                 startActivity(i);
             }
-        }, 10000);
+        }, 3000);
+
+//        while (HERO.getHealth() > 0 && VILLAIN.getHealth() > 0){
+//            attack();
+//        }
     }
 
     public void homePage(View v){
@@ -61,5 +66,8 @@ public class GameplayActivity extends AppCompatActivity {
         }
     }
 
+//    public void attack(View v){
+//
+//    }
 
 }
