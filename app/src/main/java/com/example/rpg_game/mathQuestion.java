@@ -20,6 +20,9 @@ import java.util.*;
 
 public class mathQuestion extends AppCompatActivity {
 
+    public static int enemyHealthLost;
+    public static int playerHealthLost;
+
     int rand;
     public boolean canAttack;
 
