@@ -35,7 +35,6 @@ public class GameplayActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-
                 Intent i= new Intent(GameplayActivity.this,mathQuestion.class);
                 startActivity(i);
             }
@@ -44,6 +43,10 @@ public class GameplayActivity extends AppCompatActivity {
 //        while (HERO.getHealth() > 0 && VILLAIN.getHealth() > 0){
 //            attack();
 //        }
+    }
+
+    public void attack(View v){
+
     }
 
     public void homePage(View v){

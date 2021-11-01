@@ -1,5 +1,8 @@
 package com.example.rpg_game;
 
+import static com.example.rpg_game.CharacterSelectionActivity.HERO;
+import static com.example.rpg_game.CharacterSelectionActivity.VILLAIN;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -207,13 +210,13 @@ public class mathQuestion extends AppCompatActivity {
         String realAns = firstGradeAnswers.get(rand);
         canAttack = userAns.equals(realAns);
         if (canAttack == true){
-            Toast.makeText(this, "Correct!", Toast.LENGTH_SHORT).show();
+            HERO.setHeroDamage();
+            Toast.makeText(this, "Correct! You did " + (int)HERO.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
+            HERO.dealDamage(VILLAIN);
         }
         else {
             Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show();
         }
-        Intent intent = new Intent(this, GameplayActivity.class);
-        startActivity(intent);
         Intent sendInfo = new Intent(this, GameplayActivity.class);
         startActivity(sendInfo);
 
