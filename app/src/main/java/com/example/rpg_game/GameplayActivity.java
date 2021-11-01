@@ -11,10 +11,13 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class GameplayActivity extends AppCompatActivity {
     ImageView heroView;
     ImageView villainView;
+    TextView heroHealth;
+    TextView villainHealth;
     boolean play;
     ImageButton play_pause_button;
 
@@ -26,6 +29,10 @@ public class GameplayActivity extends AppCompatActivity {
         heroView.setImageResource(CharacterSelectionActivity.HERO.getImageID());
         villainView = (ImageView) findViewById(R.id.enemyCharacter);
         villainView.setImageResource(CharacterSelectionActivity.VILLAIN.getImageID());
+        heroHealth = findViewById(R.id.playerHealthText);
+        villainHealth = findViewById(R.id.enemyHealthText);
+        heroHealth.setText((HERO.getHealth()) + "");
+        villainHealth.setText((VILLAIN.getHealth()) + "");
         play = true;
         play_pause_button = findViewById(R.id.play_pause_button);
         /*
