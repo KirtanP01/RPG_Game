@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,6 +19,9 @@ import java.util.ArrayList;
 import java.util.*;
 
 public class mathQuestion extends AppCompatActivity {
+
+    public static int enemyHealthLost;
+    public static int playerHealthLost;
 
     int rand;
     public boolean canAttack;
