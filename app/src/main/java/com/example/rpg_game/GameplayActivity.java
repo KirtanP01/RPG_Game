@@ -9,11 +9,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class GameplayActivity extends AppCompatActivity {
     ImageView heroView;
     ImageView villainView;
+    boolean play;
+    ImageButton play_pause_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,8 @@ public class GameplayActivity extends AppCompatActivity {
         heroView.setImageResource(CharacterSelectionActivity.HERO.getImageID());
         villainView = (ImageView) findViewById(R.id.enemyCharacter);
         villainView.setImageResource(CharacterSelectionActivity.VILLAIN.getImageID());
+        play = true;
+        play_pause_button = findViewById(R.id.play_pause_button);
         /*
             This method automatically opens up the math question activity and asks the user a math question
          */
@@ -58,16 +63,14 @@ public class GameplayActivity extends AppCompatActivity {
         if(play){
             onPause();
             play = false;
+            play_pause_button.setImageResource(R.drawable.pauseicon);
         }
 
-        if(play == false){
-            onResume();
-            play = true;
+        else if(!play){
+                onResume();
+                play = true;
+                play_pause_button.setImageResource(R.drawable.playicon);
         }
+
     }
-
-//    public void attack(View v){
-//
-//    }
-
 }
