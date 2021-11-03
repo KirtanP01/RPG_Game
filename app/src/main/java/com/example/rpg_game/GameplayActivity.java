@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class GameplayActivity extends AppCompatActivity {
     ImageView heroView;
@@ -21,7 +20,6 @@ public class GameplayActivity extends AppCompatActivity {
     TextView villainHealth;
     boolean play;
     ImageButton play_pause_button;
-    int defeatCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +35,6 @@ public class GameplayActivity extends AppCompatActivity {
         villainHealth.setText((VILLAIN.getHealth()) + "");
         play = true;
         play_pause_button = findViewById(R.id.play_pause_button);
-        playGame();
         /*
             This method automatically opens up the math question activity and asks the user a math question
          */
@@ -48,36 +45,15 @@ public class GameplayActivity extends AppCompatActivity {
                 Intent i= new Intent(GameplayActivity.this,mathQuestion.class);
                 startActivity(i);
             }
-        }, 5000);
+        }, 3000);
 
 //        while (HERO.getHealth() > 0 && VILLAIN.getHealth() > 0){
 //            attack();
 //        }
     }
 
-    public void playGame(){
-        double originalVHealth = VILLAIN.getHealth();
-        while (HERO.getHealth()>0 && defeatCount < 3) {
-            Toast.makeText(this, "The villain dealt " + VILLAIN.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
-            VILLAIN.dealDamage(HERO);
-            heroHealth.setText((HERO.getHealth()) + "");
-            if (VILLAIN.getHealth() <= 0) {
-                Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
-                defeatCount++;
-                HERO.setHealth(100);
-                VILLAIN.setHealth(originalVHealth + 5);
-                originalVHealth = VILLAIN.getHealth();
-                VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
-            }
-        }
-        if (HERO.getHealth() <= 0){
-            Intent i= new Intent(this,GameOver.class);
-            startActivity(i);
-        }
-        if (defeatCount == 3){
-            Intent i= new Intent(this,Congratulations.class);
-            startActivity(i);
-        }
+    public void attack(View v){
+
     }
 
     public void homePage(View v){
