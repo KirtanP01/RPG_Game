@@ -37,7 +37,7 @@ public class GameplayActivity extends AppCompatActivity {
         villainHealth.setText((VILLAIN.getHealth()) + "");
         play = true;
         play_pause_button = findViewById(R.id.play_pause_button);
-        playGame();
+        // playGame();
         /*
             This method automatically opens up the math question activity and asks the user a math question
          */
@@ -55,6 +55,7 @@ public class GameplayActivity extends AppCompatActivity {
 //        }
     }
 
+    /*
     public void playGame(){
         double originalVHealth = VILLAIN.getHealth();
         while (HERO.getHealth()>0 && defeatCount < 3) {
@@ -79,7 +80,7 @@ public class GameplayActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
-
+    */
     public void homePage(View v){
         Intent homePage = new Intent(this, MainActivity.class);
         startActivity(homePage);
