@@ -218,7 +218,9 @@ public class mathQuestion extends AppCompatActivity {
             HERO.dealDamage(VILLAIN);
         }
         else {
-            Toast.makeText(this, "Incorrect", Toast.LENGTH_SHORT).show();
+            VILLAIN.setHeroDamage();
+            Toast.makeText(this, "Incorrect! The enemy dealt " + (int)VILLAIN.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
+            VILLAIN.dealDamage(HERO);
         }
         Intent sendInfo = new Intent(this, GameplayActivity.class);
         startActivity(sendInfo);
