@@ -55,13 +55,14 @@ public class GameplayActivity extends AppCompatActivity {
 //        }
     }
 
-    /*
+
     public void playGame(){
         double originalVHealth = VILLAIN.getHealth();
         while (HERO.getHealth()>0 && defeatCount < 3) {
             Toast.makeText(this, "The villain dealt " + VILLAIN.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
             VILLAIN.dealDamage(HERO);
             heroHealth.setText((HERO.getHealth()) + "");
+
             if (VILLAIN.getHealth() <= 0) {
                 Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
                 defeatCount++;
@@ -80,7 +81,7 @@ public class GameplayActivity extends AppCompatActivity {
             startActivity(i);
         }
     }
-    */
+
     public void homePage(View v){
         Intent homePage = new Intent(this, MainActivity.class);
         startActivity(homePage);
