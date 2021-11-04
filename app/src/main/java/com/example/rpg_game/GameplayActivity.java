@@ -22,9 +22,6 @@ public class GameplayActivity extends AppCompatActivity {
     boolean play;
     ImageButton play_pause_button;
     int defeatCount;
-    int playIndex;
-    double originalVHealth = VILLAIN.getHealth();
-    Intent i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,44 +36,33 @@ public class GameplayActivity extends AppCompatActivity {
         heroHealth.setText((HERO.getHealth()) + "");
         villainHealth.setText((VILLAIN.getHealth()) + "");
         play = true;
-        playIndex = 0;
         play_pause_button = findViewById(R.id.play_pause_button);
-        if (playIndex >= 1){
-            playGame();
-        }
+        // playGame();
         /*
             This method automatically opens up the math question activity and asks the user a math question
          */
         // https://stackoverflow.com/questions/7965494/how-to-put-some-delay-in-calling-an-activity-from-another-activity
-        if (playIndex == 0){
-            playIndex++;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    i= new Intent(GameplayActivity.this,mathQuestion.class);
-                    startActivity(i);
-                }
-            }, 5000);
-        }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent i= new Intent(GameplayActivity.this,mathQuestion.class);
+                startActivity(i);
+            }
+        }, 5000);
 
 //        while (HERO.getHealth() > 0 && VILLAIN.getHealth() > 0){
 //            attack();
 //        }
     }
 
+
     public void playGame(){
-        if (HERO.getHealth() <= 0){
-            i= new Intent(this,GameOver.class);
-            startActivity(i);
-        }
-        if (defeatCount == 3){
-            i= new Intent(this,Congratulations.class);
-            startActivity(i);
-        }
+        double originalVHealth = VILLAIN.getHealth();
         while (HERO.getHealth()>0 && defeatCount < 3) {
             Toast.makeText(this, "The villain dealt " + VILLAIN.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
             VILLAIN.dealDamage(HERO);
             heroHealth.setText((HERO.getHealth()) + "");
+
             if (VILLAIN.getHealth() <= 0) {
                 Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
                 defeatCount++;
@@ -85,7 +71,13 @@ public class GameplayActivity extends AppCompatActivity {
                 originalVHealth = VILLAIN.getHealth();
                 VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
             }
-            i= new Intent(GameplayActivity.this,mathQuestion.class);
+        }
+        if (HERO.getHealth() <= 0){
+            Intent i= new Intent(this,GameOver.class);
+            startActivity(i);
+        }
+        if (defeatCount == 3){
+            Intent i= new Intent(this,Congratulations.class);
             startActivity(i);
         }
     }

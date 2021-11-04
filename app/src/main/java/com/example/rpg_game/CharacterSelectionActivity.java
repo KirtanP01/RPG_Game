@@ -20,13 +20,13 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_character_selection);
 
         ImageButton imageButtonC1 = (ImageButton)findViewById(R.id.characterOne);
-        imageButtonC1.setImageResource(R.drawable.knightzoomed);
+        imageButtonC1.setImageResource(R.drawable.knights);
 
         ImageButton imageButtonC2 = (ImageButton)findViewById(R.id.characterTwo);
-        imageButtonC2.setImageResource(R.drawable.clockworkknightzoomed);
+        imageButtonC2.setImageResource(R.drawable.clockworkknight);
 
         ImageButton imageButtonC3 = (ImageButton)findViewById(R.id.characterThree);
-        imageButtonC3.setImageResource(R.drawable.championzoomed);
+        imageButtonC3.setImageResource(R.drawable.champion);
     }
 
     public void homePage(View v){
@@ -48,9 +48,9 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         ImageButton imageButtonC1 = (ImageButton)findViewById(R.id.characterOne);
         ImageButton imageButtonC2 = (ImageButton)findViewById(R.id.characterTwo);
         ImageButton imageButtonC3 = (ImageButton)findViewById(R.id.characterThree);
-        imageButtonC1.setImageResource(R.drawable.knightzoomedselected);
-        imageButtonC2.setImageResource(R.drawable.clockworkknightzoomed);
-        imageButtonC3.setImageResource(R.drawable.championzoomed);
+        imageButtonC1.setImageResource(R.drawable.knightselected);
+        imageButtonC2.setImageResource(R.drawable.clockworkknight);
+        imageButtonC3.setImageResource(R.drawable.champion);
     }
 
     public void chooseTwo(View v)
@@ -59,9 +59,9 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         ImageButton imageButtonC1 = (ImageButton)findViewById(R.id.characterOne);
         ImageButton imageButtonC2 = (ImageButton)findViewById(R.id.characterTwo);
         ImageButton imageButtonC3 = (ImageButton)findViewById(R.id.characterThree);
-        imageButtonC1.setImageResource(R.drawable.knightzoomed);
-        imageButtonC2.setImageResource(R.drawable.clockworkknightzoomedselected);
-        imageButtonC3.setImageResource(R.drawable.championzoomed);
+        imageButtonC1.setImageResource(R.drawable.knights);
+        imageButtonC2.setImageResource(R.drawable.clockworkknightselected);
+        imageButtonC3.setImageResource(R.drawable.champion);
     }
 
     public void chooseThree(View v)
@@ -70,9 +70,9 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         ImageButton imageButtonC1 = (ImageButton)findViewById(R.id.characterOne);
         ImageButton imageButtonC2 = (ImageButton)findViewById(R.id.characterTwo);
         ImageButton imageButtonC3 = (ImageButton)findViewById(R.id.characterThree);
-        imageButtonC1.setImageResource(R.drawable.knightzoomed);
-        imageButtonC2.setImageResource(R.drawable.clockworkknightzoomed);
-        imageButtonC3.setImageResource(R.drawable.championzoomedselected);
+        imageButtonC1.setImageResource(R.drawable.knights);
+        imageButtonC2.setImageResource(R.drawable.clockworkknight);
+        imageButtonC3.setImageResource(R.drawable.championselected);
     }
 
     public void startGame(View v){
