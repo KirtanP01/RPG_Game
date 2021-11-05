@@ -21,7 +21,7 @@ public class GameplayActivity extends AppCompatActivity {
     TextView villainHealth;
     boolean play;
     ImageButton play_pause_button;
-    int defeatCount;
+    int defeatCount = 0;
     int playIndex;
     double originalVHealth;
     Intent i;
@@ -63,9 +63,10 @@ public class GameplayActivity extends AppCompatActivity {
 //        }
 
     }
-
+        // https://developer.android.com/guide/components/activities/activity-lifecycle
         public void playGame () {
-            while (HERO.getHealth() > 0 && defeatCount < 3) {
+
+            while (defeatCount < 3) {
 
                 i = new Intent(GameplayActivity.this, mathQuestion.class);
                 startActivity(i);
