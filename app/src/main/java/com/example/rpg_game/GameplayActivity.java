@@ -64,34 +64,91 @@ public class GameplayActivity extends AppCompatActivity {
 
     }
 
-        public void playGame () {
+    public void playGame()
+    {
+        HERO.setHealth(100);
 
-            i = new Intent(GameplayActivity.this, mathQuestion.class);
-            startActivity(i);
+        if (defeatCount == 0)
+        {
+            VILLAIN.setHealth(100);
+        }
 
-        while (HERO.getHealth() > 0 && defeatCount < 3) {
-                if (VILLAIN.getHealth() <= 0) {
-                    Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
-                    defeatCount++;
-                    if (defeatCount == 3) {
-                        Intent congrats = new Intent(this, Congratulations.class);
-                        startActivity(congrats);
+        if (defeatCount == 1)
+        {
+            VILLAIN.setHealth(150);
+        }
+
+        if (defeatCount == 2)
+        {
+            VILLAIN.setHealth(200);
+        }
+
+            if (playIndex == 0) {
+                playIndex++;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        i = new Intent(GameplayActivity.this, mathQuestion.class);
+                        startActivity(i);
                     }
-                    HERO.setHealth(100);
-                    VILLAIN.setHealth(originalVHealth + 5);
-                    originalVHealth = VILLAIN.getHealth();
-                    VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
+                }, 5000);
+            }
+            updateHealth();
+        if (VILLAIN.getHealth() < 0) {
+            Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
+            defeatCount++;
+            if (defeatCount == 3) {
+                Intent congrats = new Intent(this, Congratulations.class);
+                startActivity(congrats);
+            }
+            HERO.setHealth(100);
+            VILLAIN.setHealth(originalVHealth + 5);
+            originalVHealth = VILLAIN.getHealth();
+            VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
+        }
+
+        if (HERO.getHealth() < 0) {
+            Intent gameOver = new Intent(this, GameOver.class);
+            startActivity(gameOver);
+        }
+    }
+
+       /* public void playGame () {
+
+        while (HERO.getHealth() > 0) {
+            if (playIndex == 0) {
+                playIndex++;
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        i = new Intent(GameplayActivity.this, mathQuestion.class);
+                        startActivity(i);
+                    }
+                }, 5000);
+            }
+
+            if (VILLAIN.getHealth() < 0) {
+                Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
+                defeatCount++;
+                if (defeatCount == 3) {
+                    Intent congrats = new Intent(this, Congratulations.class);
+                    startActivity(congrats);
                 }
-                //updateHealth();
-                VILLAIN.dealDamage(HERO);
-                updateHealth();
-                Toast.makeText(this, "The villain dealt " + VILLAIN.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
-                if (HERO.getHealth() <= 0) {
-                    Intent gameOver = new Intent(this, GameOver.class);
-                    startActivity(gameOver);
-                }
+                HERO.setHealth(100);
+                VILLAIN.setHealth(originalVHealth + 5);
+                originalVHealth = VILLAIN.getHealth();
+                VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
+            }
+            //updateHealth();
+            VILLAIN.dealDamage(HERO);
+            updateHealth();
+            Toast.makeText(this, "The villain dealt " + VILLAIN.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
+            if (HERO.getHealth() < 0) {
+                Intent gameOver = new Intent(this, GameOver.class);
+                startActivity(gameOver);
             }
         }
+    }*/
 
         public void updateHealth () {
             heroHealth.setText((HERO.getHealth()) + "");
