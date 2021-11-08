@@ -65,10 +65,11 @@ public class GameplayActivity extends AppCompatActivity {
     }
 
         public void playGame () {
-            while (HERO.getHealth() > 0 && defeatCount < 3) {
 
-                i = new Intent(GameplayActivity.this, mathQuestion.class);
-                startActivity(i);
+            i = new Intent(GameplayActivity.this, mathQuestion.class);
+            startActivity(i);
+
+        while (HERO.getHealth() > 0 && defeatCount < 3) {
                 if (VILLAIN.getHealth() <= 0) {
                     Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
                     defeatCount++;
