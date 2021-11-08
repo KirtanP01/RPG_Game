@@ -66,23 +66,25 @@ public class GameplayActivity extends AppCompatActivity {
 
         public void playGame () {
 
-            i = new Intent(GameplayActivity.this, mathQuestion.class);
-            startActivity(i);
+
 
         while (HERO.getHealth() > 0 && defeatCount < 3) {
+
                 if (VILLAIN.getHealth() <= 0) {
                     Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
                     defeatCount++;
+
                     if (defeatCount == 3) {
                         Intent congrats = new Intent(this, Congratulations.class);
                         startActivity(congrats);
+                        HERO.setHealth(100);
+                        VILLAIN.setHealth(originalVHealth + 5);
+                        originalVHealth = VILLAIN.getHealth();
+                        VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
                     }
-                    HERO.setHealth(100);
-                    VILLAIN.setHealth(originalVHealth + 5);
-                    originalVHealth = VILLAIN.getHealth();
-                    VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
+
                 }
-                //updateHealth();
+                updateHealth();
                 VILLAIN.dealDamage(HERO);
                 updateHealth();
                 Toast.makeText(this, "The villain dealt " + VILLAIN.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
