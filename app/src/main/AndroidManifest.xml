@@ -10,16 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RPG_Game">
         <activity
-            android:name=".truePauseActivity"
+            android:name=".GameOver"
             android:exported="true" />
         <activity
-            android:name=".game_over"
-            android:exported="true" />
-        <activity
-            android:name=".congratulations"
-            android:exported="true" />
-        <activity
-            android:name=".activity_menu"
+            android:name=".Congratulations"
             android:exported="true" />
         <activity
             android:name=".mathQuestion"

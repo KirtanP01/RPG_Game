@@ -151,6 +151,7 @@
         android:id="@+id/play_pause_button"
         android:layout_width="85dp"
         android:layout_height="35dp"
+        android:background="@null"
         android:onClick="pauseGame"
         android:padding="0dp"
         android:scaleType="centerCrop"
@@ -160,7 +161,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.058"
-        app:srcCompat="@drawable/pauseicon" />
+        app:srcCompat="@drawable/selector" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
