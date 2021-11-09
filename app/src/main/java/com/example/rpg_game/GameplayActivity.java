@@ -92,19 +92,7 @@ public class GameplayActivity extends AppCompatActivity {
 //    }
 
     public void pauseGame(View v){
-        boolean play = true;
-
-        if(play){
-            onPause();
-            play = false;
-            play_pause_button.setImageResource(R.drawable.pauseicon);
-        }
-
-        else if(!play){
-                onResume();
-                play = true;
-                play_pause_button.setImageResource(R.drawable.playicon);
-        }
-
+        Intent pauseGame = new Intent(this,truePauseActivity.class);
+        startActivity(pauseGame);
     }
 }
