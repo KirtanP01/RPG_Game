@@ -2,6 +2,7 @@ package com.example.rpg_game;
 
 import static com.example.rpg_game.CharacterSelectionActivity.HERO;
 import static com.example.rpg_game.CharacterSelectionActivity.VILLAIN;
+import static com.example.rpg_game.mathQuestion.canAttack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -66,48 +67,43 @@ public class GameplayActivity extends AppCompatActivity {
 
     public void playGame()
     {
-        HERO.setHealth(100);
 
-        if (defeatCount == 0)
-        {
-            VILLAIN.setHealth(100);
-        }
-
-        if (defeatCount == 1)
-        {
-            VILLAIN.setHealth(150);
-        }
-
-        if (defeatCount == 2)
-        {
-            VILLAIN.setHealth(200);
-        }
-
-            if (playIndex == 0) {
+        updateHealth();
+            if (playIndex == 0)
+            {
                 playIndex++;
-                new Handler().postDelayed(new Runnable() {
+                new Handler().postDelayed(new Runnable()
+                {
                     @Override
-                    public void run() {
+                    public void run()
+                    {
                         i = new Intent(GameplayActivity.this, mathQuestion.class);
                         startActivity(i);
                     }
                 }, 5000);
             }
-            updateHealth();
-        if (VILLAIN.getHealth() < 0) {
+
+        if (VILLAIN.getHealth() <= 0)
+        {
             Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
+
             defeatCount++;
-            if (defeatCount == 3) {
+
+            if (defeatCount == 3)
+            {
                 Intent congrats = new Intent(this, Congratulations.class);
                 startActivity(congrats);
             }
+
             HERO.setHealth(100);
-            VILLAIN.setHealth(originalVHealth + 5);
+            VILLAIN.setHealth(100 + 50);
             originalVHealth = VILLAIN.getHealth();
             VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
         }
 
-        if (HERO.getHealth() < 0) {
+        if (HERO.getHealth() <= 0)
+        {
+            playIndex = 1;
             Intent gameOver = new Intent(this, GameOver.class);
             startActivity(gameOver);
         }
@@ -151,8 +147,8 @@ public class GameplayActivity extends AppCompatActivity {
     }*/
 
         public void updateHealth () {
-            heroHealth.setText((HERO.getHealth()) + "");
-            villainHealth.setText((VILLAIN.getHealth()) + "");
+            heroHealth.setText((HERO.getHealth()) + " HP");
+            villainHealth.setText((VILLAIN.getHealth()) + " HP");
         }
 
         public void homePage (View v){

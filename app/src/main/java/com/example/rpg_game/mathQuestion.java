@@ -24,7 +24,7 @@ public class mathQuestion extends AppCompatActivity {
     public static int playerHealthLost;
 
     int rand;
-    public boolean canAttack;
+    public static boolean canAttack;
 
     ArrayList<String> firstGradeQuestions = new ArrayList<String>();
     ArrayList<String> firstGradeAnswers = new ArrayList<String>();
@@ -114,18 +114,20 @@ public class mathQuestion extends AppCompatActivity {
 
     public void submit(View v){
         EditText answer = findViewById(R.id.mathAnswerEditText);
-        String userAns = answer.getText().toString();
         String realAns = firstGradeAnswers.get(rand);
+        String userAns = answer.getText().toString();
         canAttack = userAns.equals(realAns);
         if (canAttack == true){
             HERO.setHeroDamage();
             Toast.makeText(this, "Correct! You did " + (int)HERO.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
             HERO.dealDamage(VILLAIN);
+            enemyHealthLost++;
         }
         else {
             VILLAIN.setHeroDamage();
             Toast.makeText(this, "Incorrect! The enemy dealt " + (int)VILLAIN.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
             VILLAIN.dealDamage(HERO);
+            playerHealthLost++;
         }
         Intent sendInfo = new Intent(this, GameplayActivity.class);
         startActivity(sendInfo);
