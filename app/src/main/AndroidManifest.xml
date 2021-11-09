@@ -11,11 +11,7 @@
         android:theme="@style/Theme.RPG_Game">
         <activity
             android:name=".truePauseActivity"
-<<<<<<< HEAD
-            android:exported="false" />
-=======
             android:exported="true" />
->>>>>>> 642244d24301f4aaea5dca7fd12c63157d2d359e
         <activity
             android:name=".GameOver"
             android:exported="true" />
@@ -24,11 +20,6 @@
             android:exported="true" />
         <activity
             android:name=".mathQuestion"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-            android:exported="true"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".PauseActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
             android:screenOrientation="landscape" />
