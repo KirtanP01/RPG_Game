@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameplayActivity"
+    android:background="@drawable/background">
+
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="224dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grassground" />
+
+    <ImageView
+        android:id="@+id/userCharacter"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/enemyCharacter"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toEndOf="@+id/userCharacter"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/userHealthBar"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#B00020"
+        android:foreground="@color/design_default_color_error"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/bottom_bar" />
+
+    <ImageView
+        android:id="@+id/userHealthBarOverlay"
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0.05"
+        android:background="#000000"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/enemyHealthBar"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userCharacter"
+        app:layout_constraintVertical_bias="0.928"
+        app:srcCompat="@android:drawable/bottom_bar"
+        tools:srcCompat="@color/design_default_color_background" />
+
+    <TextView
+        android:id="@+id/playerHealthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 HP"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/userHealthBar"
+        app:layout_constraintEnd_toEndOf="@+id/userHealthBar"
+        app:layout_constraintStart_toStartOf="@+id/userHealthBar"
+        app:layout_constraintTop_toTopOf="@+id/userHealthBar" />
+
+    <ImageView
+        android:id="@+id/enemyHealthBar"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#B00020"
+        android:foreground="@color/design_default_color_error"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/bottom_bar" />
+
+    <ImageView
+        android:id="@+id/enemyHealthBarOverlay"
+        android:layout_width="1dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="#000000"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintStart_toEndOf="@+id/userHealthBar"
+        app:layout_constraintTop_toBottomOf="@+id/enemyCharacter"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/bottom_bar"
+        tools:srcCompat="@color/design_default_color_background" />
+
+    <TextView
+        android:id="@+id/enemyHealthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 HP"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/enemyHealthBar"
+        app:layout_constraintEnd_toEndOf="@+id/enemyHealthBar"
+        app:layout_constraintStart_toStartOf="@+id/enemyHealthBar"
+        app:layout_constraintTop_toTopOf="@+id/enemyHealthBar" />
+
+    <ImageButton
+        android:id="@+id/pauseButton"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
+        android:background="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/menu"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.055" />
+
+    <ImageButton
+        android:id="@+id/play_pause_button"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:onClick="pauseGame"
+        android:padding="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.058"
+        app:srcCompat="@drawable/pauseicon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
