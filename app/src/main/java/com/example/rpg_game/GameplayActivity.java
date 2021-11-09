@@ -69,6 +69,35 @@ public class GameplayActivity extends AppCompatActivity {
     {
 
         updateHealth();
+
+        if (VILLAIN.getHealth() <= 0)
+        {
+            Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
+
+            defeatCount++;
+
+            Character villain2 = new Character(100,5, R.drawable.boss2);
+
+            HERO.setHealth(100);
+            VILLAIN.setHealth(100 + 50);
+            originalVHealth = VILLAIN.getHealth();
+            VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
+            VILLAIN.setImageID(villain2.getImageID());
+
+            if (defeatCount == 3)
+            {
+                Intent congrats = new Intent(this, Congratulations.class);
+                startActivity(congrats);
+            }
+        }
+
+        if (HERO.getHealth() <= 0)
+        {
+            playIndex = 1;
+            Intent gameOver = new Intent(this, GameOver.class);
+            startActivity(gameOver);
+        }
+
             if (playIndex == 0)
             {
                 playIndex++;
@@ -82,31 +111,6 @@ public class GameplayActivity extends AppCompatActivity {
                     }
                 }, 5000);
             }
-
-        if (VILLAIN.getHealth() <= 0)
-        {
-            Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
-
-            defeatCount++;
-
-            if (defeatCount == 3)
-            {
-                Intent congrats = new Intent(this, Congratulations.class);
-                startActivity(congrats);
-            }
-
-            HERO.setHealth(100);
-            VILLAIN.setHealth(100 + 50);
-            originalVHealth = VILLAIN.getHealth();
-            VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
-        }
-
-        if (HERO.getHealth() <= 0)
-        {
-            playIndex = 1;
-            Intent gameOver = new Intent(this, GameOver.class);
-            startActivity(gameOver);
-        }
     }
 
        /* public void playGame () {
