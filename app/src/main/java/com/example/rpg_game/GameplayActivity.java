@@ -24,6 +24,7 @@ public class GameplayActivity extends AppCompatActivity {
     ImageButton play_pause_button;
     int defeatCount;
     int playIndex;
+    public boolean stop = false;
     double originalVHealth;
     Intent i;
 
@@ -72,13 +73,21 @@ public class GameplayActivity extends AppCompatActivity {
             if (playIndex == 0)
             {
                 playIndex++;
-                new Handler().postDelayed(new Runnable()
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable()
                 {
                     @Override
                     public void run()
                     {
-                        i = new Intent(GameplayActivity.this, mathQuestion.class);
-                        startActivity(i);
+                        if (stop)
+                        {
+                            handler.removeCallbacksAndMessages(null);
+                        }
+                        else
+                        {
+                            i = new Intent(GameplayActivity.this, mathQuestion.class);
+                            startActivity(i);
+                        }
                     }
                 }, 5000);
             }
@@ -103,7 +112,8 @@ public class GameplayActivity extends AppCompatActivity {
 
         if (HERO.getHealth() <= 0)
         {
-            playIndex = 1;
+            stop = true;
+
             Intent gameOver = new Intent(this, GameOver.class);
             startActivity(gameOver);
         }
