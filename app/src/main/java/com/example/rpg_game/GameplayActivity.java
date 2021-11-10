@@ -28,6 +28,9 @@ public class GameplayActivity extends AppCompatActivity {
     double originalVHealth;
     Intent i;
 
+    Character villain2 = new Character(100,5, R.drawable.boss2);
+    Character villain3 = new Character(100,5, R.drawable.boss3);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,7 +110,18 @@ public class GameplayActivity extends AppCompatActivity {
             }
 
             HERO.setHealth(100);
-            VILLAIN.setHealth(100 + 50);
+
+            if(defeatCount == 1)
+            {
+                VILLAIN.setHealth(100 + 50);
+                VILLAIN.setImageID(villain2.getImageID());
+            }
+            else
+            {
+                VILLAIN.setHealth(150 + 50);
+                VILLAIN.setImageID(villain3.getImageID());
+            }
+
             originalVHealth = VILLAIN.getHealth();
             VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
         }
