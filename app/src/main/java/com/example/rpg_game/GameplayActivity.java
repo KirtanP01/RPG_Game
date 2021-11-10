@@ -71,7 +71,7 @@ public class GameplayActivity extends AppCompatActivity {
 
     public void playGame()
     {
-
+        defeatCount = 0;
         updateHealth();
             if (playIndex == 0)
             {
@@ -92,7 +92,7 @@ public class GameplayActivity extends AppCompatActivity {
                             startActivity(i);
                         }
                     }
-                }, 5000);
+                }, 6000);
             }
 
         if (VILLAIN.getHealth() <= 0)
@@ -107,7 +107,7 @@ public class GameplayActivity extends AppCompatActivity {
 
             HERO.setHealth(100);
 
-            /*if(defeatCount == 1)
+            if(defeatCount == 1)
             {
                 VILLAIN.setHealth(100 + 50);
                 VILLAIN.setImageID(villain2.getImageID());
@@ -120,7 +120,7 @@ public class GameplayActivity extends AppCompatActivity {
                 VILLAIN.setImageID(villain3.getImageID());
 
                 stop = false;
-            }*/
+            }
 
             originalVHealth = VILLAIN.getHealth();
             VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);

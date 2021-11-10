@@ -13,9 +13,6 @@
             android:name=".truePauseActivity"
             android:exported="true" />
         <activity
-            android:name=".GameOver"
-            android:exported="true" />
-        <activity
             android:name=".Congratulations"
             android:exported="true" />
         <activity
@@ -39,6 +36,11 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".CharacterSelectionActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GameOver"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
             android:screenOrientation="landscape" />

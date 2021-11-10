@@ -5,6 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gameover"
+    android:screenOrientation="landscape"
+    android:interpolator="@android:anim/accelerate_interpolator"
+    android:fromAlpha="0.0" android:toAlpha="1.0" android:duration="2000"
+    android:orientation="horizontal"
     tools:context=".GameOver">
 
     <Button
@@ -13,6 +17,7 @@
         android:layout_height="48dp"
         android:background="@drawable/gradient_blue"
         android:text="Try again"
+        android:onClick="homePage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
