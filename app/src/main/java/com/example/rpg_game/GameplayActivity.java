@@ -139,6 +139,8 @@ public class GameplayActivity extends AppCompatActivity {
 
         public void pauseGame (View v)
         {
+            stop = true;
+
             Intent pauseGame = new Intent(this,truePauseActivity.class);
             startActivity(pauseGame);
         }
