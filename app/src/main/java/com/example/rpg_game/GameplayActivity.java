@@ -28,8 +28,8 @@ public class GameplayActivity extends AppCompatActivity {
     double originalVHealth;
     Intent i;
 
-    Character villain2 = new Character(100,5, R.drawable.boss2);
-    Character villain3 = new Character(100,5, R.drawable.boss3);
+    Character villain2 = new Character(150,10, R.drawable.boss2);
+    Character villain3 = new Character(200,30, R.drawable.boss3);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,9 +97,33 @@ public class GameplayActivity extends AppCompatActivity {
 
         if (VILLAIN.getHealth() <= 0)
         {
-            Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
-
             defeatCount++;
+            stop = true;
+
+            if (defeatCount < 3)
+            {
+                Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
+            }
+
+            HERO.setHealth(100);
+
+            /*if(defeatCount == 1)
+            {
+                VILLAIN.setHealth(100 + 50);
+                VILLAIN.setImageID(villain2.getImageID());
+
+                stop = false;
+            }
+            if(defeatCount == 2)
+            {
+                VILLAIN.setHealth(150 + 50);
+                VILLAIN.setImageID(villain3.getImageID());
+
+                stop = false;
+            }*/
+
+            originalVHealth = VILLAIN.getHealth();
+            VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
 
             if (defeatCount == 3)
             {
@@ -108,22 +132,6 @@ public class GameplayActivity extends AppCompatActivity {
                 Intent congrats = new Intent(this, Congratulations.class);
                 startActivity(congrats);
             }
-
-            HERO.setHealth(100);
-
-            if(defeatCount == 1)
-            {
-                VILLAIN.setHealth(100 + 50);
-                VILLAIN.setImageID(villain2.getImageID());
-            }
-            else
-            {
-                VILLAIN.setHealth(150 + 50);
-                VILLAIN.setImageID(villain3.getImageID());
-            }
-
-            originalVHealth = VILLAIN.getHealth();
-            VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
         }
 
         if (HERO.getHealth() <= 0)
