@@ -11,10 +11,14 @@
         android:theme="@style/Theme.RPG_Game">
         <activity
             android:name=".truePauseActivity"
-            android:exported="true" />
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".Congratulations"
-            android:exported="true" />
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".mathQuestion"
             android:configChanges="orientation|screenSize|keyboardHidden"

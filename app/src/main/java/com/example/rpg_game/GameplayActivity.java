@@ -16,13 +16,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class GameplayActivity extends AppCompatActivity {
+    public static final String EXTRA_DEFCOUNT = "com.example.rpg_game.DEFCOUNT";
     ImageView heroView;
     ImageView villainView;
     TextView heroHealth;
     TextView villainHealth;
     boolean play;
-    ImageButton play_pause_button;
     int defeatCount;
+    ImageButton play_pause_button;
     int playIndex;
     public boolean stop = false;
     double originalVHealth;
@@ -71,7 +72,7 @@ public class GameplayActivity extends AppCompatActivity {
 
     public void playGame()
     {
-        defeatCount = 0;
+        //defeatCount = 0;
         updateHealth();
             if (playIndex == 0)
             {
@@ -89,6 +90,7 @@ public class GameplayActivity extends AppCompatActivity {
                         else
                         {
                             i = new Intent(GameplayActivity.this, mathQuestion.class);
+                            i.putExtra(EXTRA_DEFCOUNT,defeatCount);
                             startActivity(i);
                         }
                     }
@@ -100,15 +102,16 @@ public class GameplayActivity extends AppCompatActivity {
             defeatCount++;
             stop = true;
 
-            if (defeatCount < 3)
-            {
-                Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
-            }
+//            if (defeatCount < 3)
+//            {
+//                Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
+//            }
 
             HERO.setHealth(100);
 
             if(defeatCount == 1)
             {
+                Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
                 VILLAIN.setHealth(100 + 50);
                 VILLAIN.setImageID(villain2.getImageID());
 
@@ -116,13 +119,14 @@ public class GameplayActivity extends AppCompatActivity {
             }
             if(defeatCount == 2)
             {
+                Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
                 VILLAIN.setHealth(150 + 50);
                 VILLAIN.setImageID(villain3.getImageID());
 
                 stop = false;
             }
 
-            originalVHealth = VILLAIN.getHealth();
+            //originalVHealth = VILLAIN.getHealth();
             VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
 
             if (defeatCount == 3)

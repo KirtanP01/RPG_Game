@@ -22,6 +22,8 @@ public class mathQuestion extends AppCompatActivity {
 
     public static int enemyHealthLost;
     public static int playerHealthLost;
+    Intent rec = getIntent();
+    String defCount = rec.getStringExtra(GameplayActivity.EXTRA_DEFCOUNT);
 
     int rand;
     public static boolean canAttack;

@@ -137,15 +137,16 @@
         android:layout_width="75dp"
         android:layout_height="30dp"
         android:background="@null"
+        android:onClick="pauseGame"
         android:scaleType="centerCrop"
         android:src="@drawable/menu"
-        android:onClick="pauseGame"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintHorizontal_bias="0.973"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.055" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <ImageButton
         android:id="@+id/play_pause_button"
@@ -155,13 +156,14 @@
         android:onClick="pauseGame"
         android:padding="0dp"
         android:scaleType="centerCrop"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058"
-        app:srcCompat="@drawable/selector" />
+        app:layout_constraintVertical_bias="0.052"
+        app:srcCompat="@drawable/pauseicon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
