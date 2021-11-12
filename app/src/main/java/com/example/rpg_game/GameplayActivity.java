@@ -81,7 +81,7 @@ public class GameplayActivity extends AppCompatActivity { ;
                             startActivity(i);
                         }
                     }
-                }, 5000);
+                }, 6000);
             }
 
         if (VILLAIN.getHealth() <= 0)
@@ -117,10 +117,16 @@ public class GameplayActivity extends AppCompatActivity { ;
             }
             else if (defeatCount == 3)
             {
-                stop = true;
+                stop = false;
 
                 Intent congrats = new Intent(this, Congratulations.class);
                 startActivity(congrats);
+            }
+
+            else if (defeatCount >= 4)
+            {
+                stop = false;
+                defeatCount = 0;
             }
 
             //originalVHealth = VILLAIN.getHealth();

@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161"
+        app:layout_constraintVertical_bias="0.088"
         app:srcCompat="@drawable/congratulations" />
 
     <TextView
@@ -30,13 +30,13 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/playMemeText"
-        android:layout_width="312dp"
-        android:layout_height="40dp"
-        android:text="Play the meme version"
+        android:layout_width="315dp"
+        android:layout_height="49dp"
+        android:text="Can you beat the game faster than before?"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,7 +51,8 @@
         android:layout_width="227dp"
         android:layout_height="42dp"
         android:background="@drawable/gradient_blue"
-        android:text="Click to play meme version"
+        android:onClick="homePage"
+        android:text="Click to play again"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"

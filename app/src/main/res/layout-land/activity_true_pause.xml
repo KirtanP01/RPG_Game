@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pausemenubackground"
     tools:context=".truePauseActivity">
 
     <ImageButton
@@ -15,10 +16,9 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pauseGameText"
-        app:layout_constraintVertical_bias="0.27"
         app:srcCompat="@drawable/continuebutton" />
 
     <ImageButton
@@ -38,12 +38,13 @@
 
     <TextView
         android:id="@+id/pauseGameText"
-        android:layout_width="518dp"
-        android:layout_height="98dp"
+        android:layout_width="458dp"
+        android:layout_height="44dp"
+        android:background="@color/black"
         android:text="You have paused the game"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#000000"
+        android:textColor="@android:color/holo_orange_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
