@@ -42,16 +42,9 @@ public class GameplayActivity extends AppCompatActivity { ;
         heroHealth = findViewById(R.id.playerHealthText);
         villainHealth = findViewById(R.id.enemyHealthText);
         originalVHealth = VILLAIN.getHealth();
-//        heroHealth.setText((HERO.getHealth()) + "");
-//        villainHealth.setText((VILLAIN.getHealth()) + "");
         updateHealth();
-        //play = true;
-//        playIndex = 0;
-        //play_pause_button = findViewById(R.id.play_pause_button);
+        stop = false;
         playGame();
-//        if (playIndex >= 1){
-//            playGame();
-//        }
     }
 
     public void playGame()
@@ -151,12 +144,6 @@ public class GameplayActivity extends AppCompatActivity { ;
             Intent homePage = new Intent(this, MainActivity.class);
             startActivity(homePage);
         }
-
-//    public void pauseMenu(View view)
-//    {
-//        Intent pauseMenu = new Intent(this, PauseActivity.class);
-//        startActivity(pauseMenu);
-//    }
 
         public void pauseGame (View v)
         {

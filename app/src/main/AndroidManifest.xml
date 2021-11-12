@@ -13,12 +13,12 @@
             android:name=".truePauseActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Congratulations"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".mathQuestion"
             android:configChanges="orientation|screenSize|keyboardHidden"
