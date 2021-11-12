@@ -52,6 +52,7 @@
         android:layout_height="42dp"
         android:background="@drawable/gradient_blue"
         android:text="Click to play meme version"
+        android:onClick="restartGame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"

@@ -48,6 +48,7 @@ public class GameplayActivity extends AppCompatActivity { ;
         //play = true;
 //        playIndex = 0;
         //play_pause_button = findViewById(R.id.play_pause_button);
+        stop = false;
         playGame();
 //        if (playIndex >= 1){
 //            playGame();
