@@ -21,7 +21,7 @@ public class GameplayActivity extends AppCompatActivity { ;
     TextView heroHealth;
     TextView villainHealth;
     boolean play;
-    int defeatCount = 0;
+    public static int defeatCount;
     ImageButton play_pause_button;
     int playIndex;
     public boolean stop = false;
@@ -56,7 +56,7 @@ public class GameplayActivity extends AppCompatActivity { ;
 
     public void playGame()
     {
-        defeatCount = 0;
+        /*defeatCount = 0;*/
         updateHealth();
             if (playIndex == 0)
             {
@@ -86,7 +86,7 @@ public class GameplayActivity extends AppCompatActivity { ;
 
         if (VILLAIN.getHealth() <= 0)
         {
-            defeatCount += 1;
+            defeatCount++;
 
             stop = true;
 
