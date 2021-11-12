@@ -24,7 +24,8 @@ public class Character {
     }
 
     public void setHeroDamage() {
-        double damage = (int)(Math.random() * 5) + 5000;
+        //double damage = (int)(Math.random() * 5);
+        double damage = 150;
         this.damage = damage;
     }
 
