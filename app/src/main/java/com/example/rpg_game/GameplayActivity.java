@@ -44,7 +44,9 @@ public class GameplayActivity extends AppCompatActivity { ;
         originalVHealth = VILLAIN.getHealth();
         updateHealth();
         stop = false;
-        playGame();
+        if(defeatCount < 3){
+            playGame();
+        }
     }
 
     public void playGame()
@@ -108,19 +110,20 @@ public class GameplayActivity extends AppCompatActivity { ;
 
                 stop = false;
             }
+
             else if (defeatCount == 3)
             {
-                stop = false;
+                stop = true;
 
                 Intent congrats = new Intent(this, Congratulations.class);
                 startActivity(congrats);
             }
 
-            else if (defeatCount >= 4)
-            {
-                stop = false;
-                defeatCount = 0;
-            }
+//            else if (defeatCount >= 4)
+//            {
+//                stop = false;
+//                defeatCount = 0;
+//            }
 
             //originalVHealth = VILLAIN.getHealth();
             //VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
@@ -145,10 +148,8 @@ public class GameplayActivity extends AppCompatActivity { ;
             startActivity(homePage);
         }
 
-        public void pauseGame (View v)
-        {
+        public void pauseGame (View v) {
             stop = true;
-
             Intent pauseGame = new Intent(this,truePauseActivity.class);
             startActivity(pauseGame);
         }
