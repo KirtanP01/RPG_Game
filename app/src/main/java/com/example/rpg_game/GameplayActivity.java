@@ -28,7 +28,8 @@ public class GameplayActivity extends AppCompatActivity { ;
     double originalVHealth;
     Intent i;
 
-    Character villain2 = new Character(150,10, R.drawable.boss2);
+    Character villain1 = new Character(100,10, R.drawable.boss);
+    Character villain2 = new Character(150,20, R.drawable.boss2);
     Character villain3 = new Character(200,30, R.drawable.boss3);
 
     @Override
@@ -95,6 +96,7 @@ public class GameplayActivity extends AppCompatActivity { ;
                 Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
                 VILLAIN.setHealth(100 + 50);
                 VILLAIN.setImageID(villain2.getImageID());
+                //VILLAIN.setVillainDamage(HERO.getDamage() + 5);
 
                 HERO.setHealth(100);
 
@@ -105,6 +107,7 @@ public class GameplayActivity extends AppCompatActivity { ;
                 Toast.makeText(this, "The monster has been defeated! A new monster appeared!", Toast.LENGTH_SHORT).show();
                 VILLAIN.setHealth(150 + 50);
                 VILLAIN.setImageID(villain3.getImageID());
+                //VILLAIN.setVillainDamage(HERO.getDamage() + 10);
 
                 HERO.setHealth(100);
 

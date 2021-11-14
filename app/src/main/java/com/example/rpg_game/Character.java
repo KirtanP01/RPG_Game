@@ -5,9 +5,9 @@ public class Character {
     private double damage;
     private int imageResourceID;
 
-    public Character(double health, double damage, int id) {
+    public Character(double health, double Damage, int id) {
         this.health = health;
-        this.damage = damage;
+        this.damage = Damage;
         imageResourceID = id;
     }
 
@@ -24,10 +24,10 @@ public class Character {
     }
 
     public void setHeroDamage() {
-        double damage = (int)(Math.random() * 6) + 20;
         // Commented out code below is for testing game
         //double damage = 150;
-        this.damage = damage;
+        double Damage = (int)(Math.random() * 6) + 20;
+        this.damage = Damage;
     }
 
     public void setVillainDamage(double damage) {
