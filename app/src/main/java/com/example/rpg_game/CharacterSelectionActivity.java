@@ -3,11 +3,11 @@ package com.example.rpg_game;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
+//import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
+//import android.widget.RelativeLayout;
 
 public class CharacterSelectionActivity extends AppCompatActivity {
 

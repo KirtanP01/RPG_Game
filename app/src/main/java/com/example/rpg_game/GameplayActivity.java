@@ -2,7 +2,7 @@ package com.example.rpg_game;
 
 import static com.example.rpg_game.CharacterSelectionActivity.HERO;
 import static com.example.rpg_game.CharacterSelectionActivity.VILLAIN;
-import static com.example.rpg_game.mathQuestion.canAttack;
+//import static com.example.rpg_game.mathQuestion.canAttack;
 
 import androidx.appcompat.app.AppCompatActivity;
 
