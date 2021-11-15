@@ -14,7 +14,6 @@ public class Congratulations extends AppCompatActivity {
     }
 
     public void restartGame(View v){
-        //defeatCount = 0;
         Intent continueGame = new Intent(this, MainActivity.class);
         startActivity(continueGame);
     }

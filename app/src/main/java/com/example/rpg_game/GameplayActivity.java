@@ -55,7 +55,6 @@ public class GameplayActivity extends AppCompatActivity { ;
 
     public void playGame()
     {
-        /*defeatCount = 0;*/
         updateHealth();
             if (playIndex == 0)
             {
@@ -152,15 +151,6 @@ public class GameplayActivity extends AppCompatActivity { ;
                 startActivity(congrats);
                 defeatCount = 0;
             }
-
-//            else if (defeatCount >= 4)
-//            {
-//                stop = false;
-//                defeatCount = 0;
-//            }
-
-            //originalVHealth = VILLAIN.getHealth();
-            //VILLAIN.setVillainDamage(VILLAIN.getDamage() + 5);
         }
 
         if (HERO.getHealth() <= 0)

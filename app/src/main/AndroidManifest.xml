@@ -31,11 +31,6 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".difficultySelectionActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden"
-            android:exported="true"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".instructionsActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="true"
