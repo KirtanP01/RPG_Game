@@ -119,6 +119,12 @@ public class mathQuestion extends AppCompatActivity {
             Toast.makeText(this, "Correct! You did " + (int)HERO.getDamage() + " damage!", Toast.LENGTH_SHORT).show();
             HERO.dealDamage(VILLAIN);
             enemyHealthLost++;
+
+            // If the damage dealt is greater than the villain's health, their health is set to 0
+            if(VILLAIN.getHealth() < 10)
+            {
+                VILLAIN.setHealth(0);
+            }
         }
         else {
             VILLAIN.setHeroDamage();
