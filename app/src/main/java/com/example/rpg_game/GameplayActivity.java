@@ -5,6 +5,7 @@ import static com.example.rpg_game.CharacterSelectionActivity.VILLAIN;
 //import static com.example.rpg_game.mathQuestion.canAttack;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +28,8 @@ public class GameplayActivity extends AppCompatActivity { ;
     public boolean stop = false;
     double originalVHealth;
     Intent i;
+
+    int backgroundImage2 = R.drawable.mediumdifficulty;
 
     Character villain1 = new Character(100,10, R.drawable.boss);
     Character villain2 = new Character(150,20, R.drawable.boss2);
@@ -80,6 +83,24 @@ public class GameplayActivity extends AppCompatActivity { ;
                 }, 6000);
             }
 
+        if (defeatCount == 0)
+        {
+            ConstraintLayout background1 = (ConstraintLayout) findViewById(R.id.gameplayActivityXML);
+            background1.setBackgroundResource(R.drawable.background);
+        }
+
+        if (defeatCount == 1)
+        {
+            ConstraintLayout background2 = (ConstraintLayout) findViewById(R.id.gameplayActivityXML);
+            background2.setBackgroundResource(R.drawable.backgroundtwo);
+        }
+
+        if (defeatCount == 2)
+        {
+            ConstraintLayout background3 = (ConstraintLayout) findViewById(R.id.gameplayActivityXML);
+            background3.setBackgroundResource(R.drawable.backgroundthree);
+        }
+
         if (VILLAIN.getHealth() <= 0)
         {
             defeatCount++;
@@ -108,6 +129,9 @@ public class GameplayActivity extends AppCompatActivity { ;
                 VILLAIN.setHealth(150 + 50);
                 VILLAIN.setImageID(villain3.getImageID());
                 //VILLAIN.setVillainDamage(HERO.getDamage() + 10);
+
+                ConstraintLayout background2 = (ConstraintLayout) findViewById(R.id.gameplayActivityXML);
+                background2.setBackgroundResource(R.drawable.backgroundthree);
 
                 HERO.setHealth(100);
 
