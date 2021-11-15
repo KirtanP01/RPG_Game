@@ -120,6 +120,7 @@ public class GameplayActivity extends AppCompatActivity { ;
 
                 Intent congrats = new Intent(this, Congratulations.class);
                 startActivity(congrats);
+                defeatCount = 0;
             }
 
 //            else if (defeatCount >= 4)
@@ -138,6 +139,7 @@ public class GameplayActivity extends AppCompatActivity { ;
 
             Intent gameOver = new Intent(this, GameOver.class);
             startActivity(gameOver);
+            defeatCount = 0;
         }
     }
 
