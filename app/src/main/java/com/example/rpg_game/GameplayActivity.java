@@ -130,9 +130,6 @@ public class GameplayActivity extends AppCompatActivity { ;
                 VILLAIN.setImageID(villain3.getImageID());
                 //VILLAIN.setVillainDamage(HERO.getDamage() + 10);
 
-                ConstraintLayout background2 = (ConstraintLayout) findViewById(R.id.gameplayActivityXML);
-                background2.setBackgroundResource(R.drawable.backgroundthree);
-
                 HERO.setHealth(100);
 
                 stop = false;

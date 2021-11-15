@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 //import android.widget.RelativeLayout;
 
 public class CharacterSelectionActivity extends AppCompatActivity {
@@ -92,8 +93,17 @@ public class CharacterSelectionActivity extends AppCompatActivity {
         HERO = hero;
         VILLAIN = villain;
 
-        Intent intent = new Intent(this, GameplayActivity.class);
-        startActivity(intent);
+        // If a hero is not selected, the app will send the user a message and not start the game
+        if(choice == 0)
+        {
+            Toast.makeText(this, "Please select your Hero!", Toast.LENGTH_SHORT).show();
+        }
+        // Game starts if a hero is selected
+        else
+        {
+            Intent intent = new Intent(this, GameplayActivity.class);
+            startActivity(intent);
+        }
     }
 
 }
