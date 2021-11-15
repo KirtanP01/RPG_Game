@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import static com.example.rpg_game.GameplayActivity.defeatCount;
 
 public class truePauseActivity extends AppCompatActivity {
 
@@ -22,5 +23,7 @@ public class truePauseActivity extends AppCompatActivity {
     public void restartGame(View v){
         Intent continueGame = new Intent(this, MainActivity.class);
         startActivity(continueGame);
+
+        defeatCount = 0;
     }
 }

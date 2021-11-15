@@ -22,7 +22,7 @@ public class GameplayActivity extends AppCompatActivity { ;
     TextView heroHealth;
     TextView villainHealth;
     boolean play;
-    public static int defeatCount;
+    public static int defeatCount = 0;
     ImageButton play_pause_button;
     int playIndex;
     public boolean stop = false;
@@ -80,25 +80,34 @@ public class GameplayActivity extends AppCompatActivity { ;
                             startActivity(i);
                         }
                     }
-                }, 6000);
+                }, 4000);
             }
 
         if (defeatCount == 0)
         {
             ConstraintLayout background1 = (ConstraintLayout) findViewById(R.id.gameplayActivityXML);
             background1.setBackgroundResource(R.drawable.background);
+
+            ImageView ground1 = (ImageView) findViewById(R.id.ground);
+            ground1.setImageResource(R.drawable.grassground);
         }
 
         if (defeatCount == 1)
         {
             ConstraintLayout background2 = (ConstraintLayout) findViewById(R.id.gameplayActivityXML);
-            background2.setBackgroundResource(R.drawable.backgroundtwo);
+            background2.setBackgroundResource(R.drawable.desert);
+
+            ImageView ground3 = (ImageView) findViewById(R.id.ground);
+            ground3.setImageResource(R.drawable.perfectsandground);
         }
 
         if (defeatCount == 2)
         {
             ConstraintLayout background3 = (ConstraintLayout) findViewById(R.id.gameplayActivityXML);
-            background3.setBackgroundResource(R.drawable.backgroundthree);
+            background3.setBackgroundResource(R.drawable.finalbossbackground);
+
+            ImageView ground3 = (ImageView) findViewById(R.id.ground);
+            ground3.setImageResource(R.drawable.obsidianground);
         }
 
         if (VILLAIN.getHealth() <= 0)
