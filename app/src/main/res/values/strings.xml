@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RPG_Game</string>
+    <string name="app_name">The Bootleg Quest</string>
     <string name="welcome">Welcome to the Bootleg Quest!</string>
     <string name="rpgGameName">To RPG Game</string>
     <string name="start_game">Start Game</string>
