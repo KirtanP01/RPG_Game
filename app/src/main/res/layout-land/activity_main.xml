@@ -13,8 +13,8 @@
 
     <TextView
         android:id="@+id/welcomeTextView"
-        android:layout_width="255dp"
-        android:layout_height="91dp"
+        android:layout_width="664dp"
+        android:layout_height="86dp"
         android:fontFamily="@font/amita_bold"
         android:text="@string/welcome"
         android:textAlignment="center"
