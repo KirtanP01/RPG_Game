@@ -24,8 +24,8 @@ public class Character {
     }
 
     public void setHeroDamage() {
-        // Commented out code below is for testing game
-        //double Damage = 150;
+        // Commented out code below is for testing game/demoing
+        //double Damage = 50;
 
         double Damage = (int)(Math.random() * 6) + 20;
         this.damage = Damage;
